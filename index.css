@@ -367,7 +367,7 @@ body {
 }
 
 /* extra */
-.mySlides1, .mySlides2 {display: none}
+.mySlides1, .mySlides2, .mySlides3 {display: none}
 img {vertical-align: middle;}
 
 /* Slideshow container */
