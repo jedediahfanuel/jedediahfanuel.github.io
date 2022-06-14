@@ -91,7 +91,7 @@ body {
     font-size:25px;
     transform:rotate(-90deg);
     background:transparent;
-    color:#fff;
+    color:#f8f8f2;
     position:fixed;
     left:0;
     bottom:40vh;
@@ -109,7 +109,7 @@ body {
     font-size:25px;
     transform:rotate(90deg);
     background:transparent;
-    color:#fff;
+    color:#f8f8f2;
     position:fixed;
     right:0;
     bottom:40vh;
@@ -126,7 +126,7 @@ body {
     text-align:center;
     font-size:25px;
     background:transparent;
-    color:#fff;
+    color:#f8f8f2;
     position:fixed;
     bottom:0;
     left:45vw;
@@ -281,8 +281,11 @@ body {
     outline:none;
     border-bottom:3px solid rgba(255, 255, 255,1);
 }
-.red-title {
+.dracula-red {
     color: #ff5555;
+}
+.dracula-white {
+    color:#f8f8f2;
 }
 ::placeholder {
     color:#fff;
@@ -314,7 +317,7 @@ body {
     background: #fff; 
 }
 ::-webkit-scrollbar-thumb {
-    background: #282a36; 
+    background: #280000; 
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 50, 50,0.8); 
