@@ -404,3 +404,12 @@ img {vertical-align: middle;}
   background-color: #f1f1f1;
   color: black;
 }
+
+.gh-link {
+    text-decoration: none;
+    color: #f8f8f2;
+}
+
+.gh-link:hover {
+    color: #ffb86c;
+}
