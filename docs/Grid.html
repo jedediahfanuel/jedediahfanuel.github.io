@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 1.5.0">
+<meta name="crystal_docs.project_version" content="master">
+<meta name="crystal_docs.project_name" content="grid">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="grid">
+  <title>Grid - grid master</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          grid
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" current" data-id="grid/Grid" data-name="grid">
+      <a href="Grid.html">Grid</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> Grid
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="Grid.html">Grid</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p><code><a href="Grid.html">Grid</a></code> is a simple string grid formatter library for crystal programming language.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires&quot;</span>)
+grid.virtual_generate(<span class="n">18</span>) <span class="c"># 18 char is the max width of the canvas (not the column)</span>
+grid.virtual_to_canvas
+grid.to_s(<span class="n">true</span>) <span class="c"># true [default | omittable] == top-down direction | false == left-right direction</span>
+
+<span class="c"># Rubys    Emeralds</span>
+<span class="c"># Crystals Sapphires</span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L14" target="_blank">
+        grid.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="VERSION">
+        <strong>VERSION</strong> = <code><span class="s">&quot;0.1.0&quot;</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28list%3AArray%28String%29%29-class-method" class="signature"><strong>.new</strong>(list : Array(String))</a>
+        
+          <div class="summary"><p>Initialize grid <em>list</em> with type of <code>Array(String)</code> as a input parameter.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28str%3AString%29-class-method" class="signature"><strong>.new</strong>(str : String)</a>
+        
+          <div class="summary"><p>Initialize grid <em>list</em> with type of <code>String</code> as a input parameter.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#canvas%3AArray%28Array%28String%29%29-instance-method" class="signature"><strong>#canvas</strong> : Array(Array(String))</a>
+        
+          <div class="summary"><p>Canvas is a variable that holds the cell of each string</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#canvas%3D%28canvas%3AArray%28Array%28String%29%29%29-instance-method" class="signature"><strong>#canvas=</strong>(canvas : Array(Array(String)))</a>
+        
+          <div class="summary"><p>Canvas is a variable that holds the cell of each string</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#col_height%3AArray%28Int32%29-instance-method" class="signature"><strong>#col_height</strong> : Array(Int32)</a>
+        
+          <div class="summary"><p>Holds curently max height for every column.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#col_height%3D%28col_height%3AArray%28Int32%29%29-instance-method" class="signature"><strong>#col_height=</strong>(col_height : Array(Int32))</a>
+        
+          <div class="summary"><p>Holds curently max height for every column.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#col_width%3AArray%28Int32%29-instance-method" class="signature"><strong>#col_width</strong> : Array(Int32)</a>
+        
+          <div class="summary"><p>Holds curently max width for every column.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#col_width%3D%28col_width%3AArray%28Int32%29%29-instance-method" class="signature"><strong>#col_width=</strong>(col_width : Array(Int32))</a>
+        
+          <div class="summary"><p>Holds curently max width for every column.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delimiter_count%28i%3AInt32%29%3AInt32-instance-method" class="signature"><strong>#delimiter_count</strong>(i : Int32) : Int32</a>
+        
+          <div class="summary"><p>Count the delimiter of ranged column from range first to the specified index.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delimiter_count%3AInt32-instance-method" class="signature"><strong>#delimiter_count</strong> : Int32</a>
+        
+          <div class="summary"><p>Count the delimiter of the whole column.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delimiter_count_of%28col_count%3AInt32%29%3AInt32-instance-method" class="signature"><strong>#delimiter_count_of</strong>(col_count : Int32) : Int32</a>
+        
+          <div class="summary"><p>Count the delimiter of specified column count.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#flush%28all%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#flush</strong>(all : Bool = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Flush all of the variable.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#highest_virtual_row%3AInt32-instance-method" class="signature"><strong>#highest_virtual_row</strong> : Int32</a>
+        
+          <div class="summary"><p>Get the highest of col_height.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#list%3AArray%28String%29-instance-method" class="signature"><strong>#list</strong> : Array(String)</a>
+        
+          <div class="summary"><p>Holds the list of String from the user.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#list%3D%28list%3AArray%28String%29%29-instance-method" class="signature"><strong>#list=</strong>(list : Array(String))</a>
+        
+          <div class="summary"><p>Holds the list of String from the user.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_height%3AInt32-instance-method" class="signature"><strong>#max_height</strong> : Int32</a>
+        
+          <div class="summary"><p>Holds the currently highest column value.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_height%3D%28max_height%3AInt32%29-instance-method" class="signature"><strong>#max_height=</strong>(max_height : Int32)</a>
+        
+          <div class="summary"><p>Holds the currently highest column value.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_width%3AInt32-instance-method" class="signature"><strong>#max_width</strong> : Int32</a>
+        
+          <div class="summary"><p>Holds the max width of the canvas.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_width%3D%28max_width%3AInt32%29-instance-method" class="signature"><strong>#max_width=</strong>(max_width : Int32)</a>
+        
+          <div class="summary"><p>Holds the max width of the canvas.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s%28align_left%3Dtrue%2Cseparator%3D%22%22%29%3AString-instance-method" class="signature"><strong>#to_s</strong>(align_left = <span class="n">true</span>, separator = <span class="s">&quot; &quot;</span>) : String</a>
+        
+          <div class="summary"><p>Convert all elements in <em>canvas</em> to a single string using <code>String#build</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#virtual_column_width%28virtual_index%3AInt32%2Cvirtual_row%3AInt32%29%3ATuple%28Array%28Int32%29%2CInt32%29-instance-method" class="signature"><strong>#virtual_column_width</strong>(virtual_index : Int32, virtual_row : Int32) : Tuple(Array(Int32), Int32)</a>
+        
+          <div class="summary"><p>Calculate column width for canvas virtually to the range of data.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#virtual_generate%28max_w%3AInt32%3D24%29-instance-method" class="signature"><strong>#virtual_generate</strong>(max_w : Int32 = <span class="n">24</span>)</a>
+        
+          <div class="summary"><p>Generate the virtual canvas based on the current <em>list</em> and specified <em>max width</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#virtual_one_column-instance-method" class="signature"><strong>#virtual_one_column</strong></a>
+        
+          <div class="summary"><p>Calculate the row &amp; height to the one column sized.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#virtual_to_canvas%3AArray%28Array%28String%29%29-instance-method" class="signature"><strong>#virtual_to_canvas</strong> : Array(Array(String))</a>
+        
+          <div class="summary"><p>Install the <em>list</em> to the <em>canvas</em> based on the virtual_canvas.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(list:Array(String))-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(list : Array(String))
+
+        <a class="method-permalink" href="#new%28list%3AArray%28String%29%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Initialize grid <em>list</em> with type of <code>Array(String)</code> as a input parameter.
+Example:</p>
+<pre><code class="language-crystal"><span class="t">Grid</span>.<span class="k">new</span>([<span class="s">&quot;Ruby&quot;</span>, <span class="s">&quot;Crystal&quot;</span>, <span class="s">&quot;Emerald&quot;</span>, <span class="s">&quot;Sapphire&quot;</span>])</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L79" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(str:String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(str : String)
+
+        <a class="method-permalink" href="#new%28str%3AString%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Initialize grid <em>list</em> with type of <code>String</code> as a input parameter.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Ruby Crystal Emerald Sapphire&quot;</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L88" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="canvas:Array(Array(String))-instance-method">
+      <div class="signature">
+        
+        def <strong>canvas</strong> : Array(Array(String))
+
+        <a class="method-permalink" href="#canvas%3AArray%28Array%28String%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Canvas is a variable that holds the cell of each string</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="canvas=(canvas:Array(Array(String)))-instance-method">
+      <div class="signature">
+        
+        def <strong>canvas=</strong>(canvas : Array(Array(String)))
+
+        <a class="method-permalink" href="#canvas%3D%28canvas%3AArray%28Array%28String%29%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Canvas is a variable that holds the cell of each string</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="col_height:Array(Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>col_height</strong> : Array(Int32)
+
+        <a class="method-permalink" href="#col_height%3AArray%28Int32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds curently max height for every column.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@col_height <span class="o">=</span> [<span class="n">4</span>, <span class="n">4</span>, <span class="n">3</span>]
+
+<span class="c"># =&gt; 1st column height is 4 string</span>
+<span class="c"># =&gt; 2nd column height is 4 string</span>
+<span class="c"># =&gt; 3rd column height is 3 string</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L42" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="col_height=(col_height:Array(Int32))-instance-method">
+      <div class="signature">
+        
+        def <strong>col_height=</strong>(col_height : Array(Int32))
+
+        <a class="method-permalink" href="#col_height%3D%28col_height%3AArray%28Int32%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds curently max height for every column.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@col_height <span class="o">=</span> [<span class="n">4</span>, <span class="n">4</span>, <span class="n">3</span>]
+
+<span class="c"># =&gt; 1st column height is 4 string</span>
+<span class="c"># =&gt; 2nd column height is 4 string</span>
+<span class="c"># =&gt; 3rd column height is 3 string</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L42" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="col_width:Array(Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>col_width</strong> : Array(Int32)
+
+        <a class="method-permalink" href="#col_width%3AArray%28Int32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds curently max width for every column.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@col_width <span class="o">=</span> [<span class="n">6</span>, <span class="n">7</span>, <span class="n">9</span>]
+
+<span class="c"># =&gt; 1st column width is 6 char</span>
+<span class="c"># =&gt; 2nd column width is 7 char</span>
+<span class="c"># =&gt; 3rd column width is 9 char</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="col_width=(col_width:Array(Int32))-instance-method">
+      <div class="signature">
+        
+        def <strong>col_width=</strong>(col_width : Array(Int32))
+
+        <a class="method-permalink" href="#col_width%3D%28col_width%3AArray%28Int32%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds curently max width for every column.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@col_width <span class="o">=</span> [<span class="n">6</span>, <span class="n">7</span>, <span class="n">9</span>]
+
+<span class="c"># =&gt; 1st column width is 6 char</span>
+<span class="c"># =&gt; 2nd column width is 7 char</span>
+<span class="c"># =&gt; 3rd column width is 9 char</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delimiter_count(i:Int32):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>delimiter_count</strong>(i : Int32) : Int32
+
+        <a class="method-permalink" href="#delimiter_count%28i%3AInt32%29%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Count the delimiter of ranged column from range first to the specified index.
+Example:</p>
+<pre><code class="language-crystal"><span class="c"># Say we have a list like this</span>
+[[<span class="s">&quot;a&quot;</span>], [<span class="s">&quot;b&quot;</span>], [<span class="s">&quot;c&quot;</span>]] <span class="c"># [0..1] ~&gt; [[&quot;a&quot;], [&quot;b&quot;]]</span>
+delimiter_count(<span class="n">1</span>)    <span class="c"># =&gt; 1</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L121" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delimiter_count:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>delimiter_count</strong> : Int32
+
+        <a class="method-permalink" href="#delimiter_count%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Count the delimiter of the whole column.
+Example:</p>
+<pre><code class="language-crystal"><span class="c"># Say we have a list like this</span>
+[[<span class="s">&quot;a&quot;</span>], [<span class="s">&quot;b&quot;</span>], [<span class="s">&quot;c&quot;</span>]]
+delimiter_count <span class="c"># =&gt; 2</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L109" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delimiter_count_of(col_count:Int32):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>delimiter_count_of</strong>(col_count : Int32) : Int32
+
+        <a class="method-permalink" href="#delimiter_count_of%28col_count%3AInt32%29%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Count the delimiter of specified column count.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">delimiter_count_of(<span class="n">3</span>) <span class="c"># =&gt; 2</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="flush(all:Bool=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>flush</strong>(all : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#flush%28all%3ABool%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Flush all of the variable.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">flush
+<span class="c"># @canvas.clear</span>
+<span class="c"># @col_height.clear</span>
+<span class="c"># @col_width.clear</span>
+<span class="c"># @max_height = 0</span>
+<span class="c"># @max_width = 0</span></code></pre>
+<p>Use <code><a href="Grid.html#flush%28all%3ABool%3Dfalse%29-instance-method">#flush(true)</a></code> will reset the <em>list</em> variable too.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">flush(<span class="n">true</span>)
+<span class="c"># @canvas.clear</span>
+<span class="c"># @col_height.clear</span>
+<span class="c"># @col_width.clear</span>
+<span class="c"># @max_height = 0</span>
+<span class="c"># @max_width = 0</span>
+<span class="c"># @list.clear</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L150" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="highest_virtual_row:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>highest_virtual_row</strong> : Int32
+
+        <a class="method-permalink" href="#highest_virtual_row%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get the highest of col_height.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@col_height <span class="o">=</span> [<span class="n">4</span>, <span class="n">4</span>, <span class="n">3</span>]
+highest_virtual_row <span class="c"># =&gt; 4</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L189" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="list:Array(String)-instance-method">
+      <div class="signature">
+        
+        def <strong>list</strong> : Array(String)
+
+        <a class="method-permalink" href="#list%3AArray%28String%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds the list of String from the user.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="c">#         this is 1st column   this is 2nd column</span>
+
+@list <span class="o">=</span> [[<span class="s">&quot;str_1&quot;</span>, <span class="s">&quot;str_2&quot;</span>], [<span class="s">&quot;str_9&quot;</span>, <span class="s">&quot;str_8&quot;</span>]]</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L71" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="list=(list:Array(String))-instance-method">
+      <div class="signature">
+        
+        def <strong>list=</strong>(list : Array(String))
+
+        <a class="method-permalink" href="#list%3D%28list%3AArray%28String%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds the list of String from the user.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="c">#         this is 1st column   this is 2nd column</span>
+
+@list <span class="o">=</span> [[<span class="s">&quot;str_1&quot;</span>, <span class="s">&quot;str_2&quot;</span>], [<span class="s">&quot;str_9&quot;</span>, <span class="s">&quot;str_8&quot;</span>]]</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L71" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_height:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>max_height</strong> : Int32
+
+        <a class="method-permalink" href="#max_height%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds the currently highest column value.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@canvas <span class="o">=</span> [
+  [<span class="s">&quot;a&quot;</span>, <span class="s">&quot;b&quot;</span>, <span class="s">&quot;c&quot;</span>], <span class="c"># =&gt; column 1 :: has row 3</span>
+  [<span class="s">&quot;d&quot;</span>, <span class="s">&quot;e&quot;</span>],      <span class="c"># =&gt; column 2 :: has row 2</span>
+]
+
+<span class="c"># so the highest row is 3</span>
+<span class="c"># and its became the value of @max_height</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L61" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_height=(max_height:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>max_height=</strong>(max_height : Int32)
+
+        <a class="method-permalink" href="#max_height%3D%28max_height%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds the currently highest column value.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@canvas <span class="o">=</span> [
+  [<span class="s">&quot;a&quot;</span>, <span class="s">&quot;b&quot;</span>, <span class="s">&quot;c&quot;</span>], <span class="c"># =&gt; column 1 :: has row 3</span>
+  [<span class="s">&quot;d&quot;</span>, <span class="s">&quot;e&quot;</span>],      <span class="c"># =&gt; column 2 :: has row 2</span>
+]
+
+<span class="c"># so the highest row is 3</span>
+<span class="c"># and its became the value of @max_height</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L61" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_width:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>max_width</strong> : Int32
+
+        <a class="method-permalink" href="#max_width%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds the max width of the canvas.
+Its defined by the user.
+Default value is <code>24</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L47" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_width=(max_width:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>max_width=</strong>(max_width : Int32)
+
+        <a class="method-permalink" href="#max_width%3D%28max_width%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds the max width of the canvas.
+Its defined by the user.
+Default value is <code>24</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L47" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s(align_left=true,separator=&quot;&quot;):String-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>(align_left = <span class="n">true</span>, separator = <span class="s">&quot; &quot;</span>) : String
+
+        <a class="method-permalink" href="#to_s%28align_left%3Dtrue%2Cseparator%3D%22%22%29%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert all elements in <em>canvas</em> to a single string using <code>String#build</code>.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires&quot;</span>)
+grid.virtual_generate
+grid.virtual_to_canvas
+grid.to_s
+
+<span class="c"># Rubys    Emeralds</span>
+<span class="c"># Crystals Sapphires</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L207" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="virtual_column_width(virtual_index:Int32,virtual_row:Int32):Tuple(Array(Int32),Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>virtual_column_width</strong>(virtual_index : Int32, virtual_row : Int32) : Tuple(Array(Int32), Int32)
+
+        <a class="method-permalink" href="#virtual_column_width%28virtual_index%3AInt32%2Cvirtual_row%3AInt32%29%3ATuple%28Array%28Int32%29%2CInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calculate column width for canvas virtually to the range of data.</p>
+<p>Returning the width of every column in an array, plus the column height of the last column</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@list <span class="o">=</span> [
+  <span class="s">&quot;str_1&quot;</span>,
+  <span class="s">&quot;str_30&quot;</span>,
+  <span class="s">&quot;str_200&quot;</span>,
+  <span class="s">&quot;str_4000&quot;</span>,
+  <span class="s">&quot;str_50000&quot;</span>,
+]
+virtual_column_width(<span class="n">4</span>, <span class="n">3</span>) <span class="c"># =&gt; { [7, 9], 2 }</span>
+
+<span class="c"># Virtual column would be like</span>
+<span class="c"># str_1   str_4000</span>
+<span class="c"># str_30  str_50000</span>
+<span class="c"># str_200</span>
+
+virtual_column_width(<span class="n">3</span>, <span class="n">2</span>) <span class="c"># =&gt; { [6, 7], 1 }</span>
+
+<span class="c"># Virtual column would be like</span>
+<span class="c"># str_1  str_200</span>
+<span class="c"># str_30</span></code></pre>
+<p>If virtual_index argument is larger than <em>list</em> size, than it will use the <em>list</em> size instead.</p>
+<p><span class="flag purple">NOTE</span>  virtual index is act like an index <code>its starts from 0</code>
+Example:</p>
+<pre><code class="language-crystal">@list <span class="o">=</span> [
+  <span class="s">&quot;str_1&quot;</span>,
+  <span class="s">&quot;str_30&quot;</span>,
+  <span class="s">&quot;str_200&quot;</span>,
+  <span class="s">&quot;str_4000&quot;</span>,
+  <span class="s">&quot;str_50000&quot;</span>,
+]
+
+virtual_column_width(<span class="n">100</span>, <span class="n">3</span>) <span class="c"># =&gt; { [7, 9], 2 }</span>
+
+<span class="c"># Virtual column would be like</span>
+<span class="c"># str_1   str_4000</span>
+<span class="c"># str_30  str_50000</span>
+<span class="c"># str_200</span></code></pre>
+<p>Height parameter act same like virtual_index.
+Example:</p>
+<pre><code class="language-crystal">@list <span class="o">=</span> [
+  <span class="s">&quot;str_1&quot;</span>,
+  <span class="s">&quot;str_30&quot;</span>,
+  <span class="s">&quot;str_200&quot;</span>,
+  <span class="s">&quot;str_4000&quot;</span>,
+  <span class="s">&quot;str_50000&quot;</span>,
+]
+
+virtual_column_width(<span class="n">4</span>, <span class="n">100</span>) <span class="c"># =&gt; { [9], 5 }</span>
+
+<span class="c"># Virtual column would be like</span>
+<span class="c"># str_1</span>
+<span class="c"># str_30</span>
+<span class="c"># str_200</span>
+<span class="c"># str_4000</span>
+<span class="c"># str_50000</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L288" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="virtual_generate(max_w:Int32=24)-instance-method">
+      <div class="signature">
+        
+        def <strong>virtual_generate</strong>(max_w : Int32 = <span class="n">24</span>)
+
+        <a class="method-permalink" href="#virtual_generate%28max_w%3AInt32%3D24%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Generate the virtual canvas based on the current <em>list</em> and specified <em>max width</em>.
+The max width default value is 24.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@canvas <span class="o">=</span> <span class="o">[]</span> <span class="k">of</span> <span class="t">Array</span>(<span class="t">String</span>)
+@list <span class="o">=</span> [<span class="s">&quot;str_1&quot;</span>, <span class="s">&quot;str_30&quot;</span>, <span class="s">&quot;str_200&quot;</span>, <span class="s">&quot;str_4000&quot;</span>, <span class="s">&quot;str_50000&quot;</span>]
+
+virtual_generate <span class="c"># generate our virtual canvas with default value of @max_width = 24</span>
+
+<span class="c"># Then our virtual_canvas are</span>
+@col_width <span class="o">=</span> [<span class="n">7</span>, <span class="n">9</span>]
+@col_height <span class="o">=</span> [<span class="n">3</span>, <span class="n">2</span>]
+
+<span class="c"># str_1   str_4000</span>
+<span class="c"># str_30  str_50000</span>
+<span class="c"># str_200</span>
+
+virtual_generate(<span class="n">25</span>) <span class="c"># generate our virtual canvas @max_width = 25</span>
+
+<span class="t">Then</span> our virtual_canvas are
+@col_width <span class="o">=</span> [<span class="n">7</span>, <span class="n">9</span>]
+@col_height <span class="o">=</span> [<span class="n">3</span>, <span class="n">2</span>]
+
+<span class="c"># str_1  str_200  str_50000</span>
+<span class="c"># str_30 str_4000</span></code></pre>
+<p><span class="flag purple">NOTE</span>  currently only support top-down direction</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L356" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="virtual_one_column-instance-method">
+      <div class="signature">
+        
+        def <strong>virtual_one_column</strong>
+
+        <a class="method-permalink" href="#virtual_one_column-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calculate the row &amp; height to the one column sized.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@list <span class="o">=</span> [
+  <span class="s">&quot;str_1&quot;</span>,
+  <span class="s">&quot;str_3&quot;</span>,
+  <span class="s">&quot;str_2&quot;</span>,
+  <span class="s">&quot;str_4&quot;</span>,
+  <span class="s">&quot;str_5&quot;</span>,
+  <span class="s">&quot;str_6&quot;</span>,
+  <span class="s">&quot;str_7&quot;</span>,
+]
+
+virtual_one_column
+<span class="c"># @col_width = [5]</span>
+<span class="c"># @col_height = [7]</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L318" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="virtual_to_canvas:Array(Array(String))-instance-method">
+      <div class="signature">
+        
+        def <strong>virtual_to_canvas</strong> : Array(Array(String))
+
+        <a class="method-permalink" href="#virtual_to_canvas%3AArray%28Array%28String%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Install the <em>list</em> to the <em>canvas</em> based on the virtual_canvas.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@canvas <span class="o">=</span> <span class="o">[]</span> <span class="k">of</span> <span class="t">Array</span>(<span class="t">String</span>)
+@list <span class="o">=</span> [<span class="s">&quot;str_1&quot;</span>, <span class="s">&quot;str_30&quot;</span>, <span class="s">&quot;str_200&quot;</span>, <span class="s">&quot;str_4000&quot;</span>, <span class="s">&quot;str_50000&quot;</span>]
+
+<span class="c"># Then our virtual_canvas are</span>
+@col_width <span class="o">=</span> [<span class="n">7</span>, <span class="n">9</span>]
+@col_height <span class="o">=</span> [<span class="n">3</span>, <span class="n">2</span>]
+
+<span class="c"># Then we call `virtual_to_canvas`</span>
+virtual_to_canvas
+
+<span class="c"># Our canvas would be like this</span>
+@canvas <span class="o">=</span> [
+  [<span class="s">&quot;str_1&quot;</span>, <span class="s">&quot;str_30&quot;</span>, <span class="s">&quot;str_200&quot;</span>], <span class="c"># this is column 1</span>
+  [<span class="s">&quot;str_4000&quot;</span>, <span class="s">&quot;str_50000&quot;</span>],      <span class="c"># this is column 2</span>
+]</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/b9ee0e91122bdbe68c4f6ae9cba968af27bdf775/src/grid.cr#L445" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
