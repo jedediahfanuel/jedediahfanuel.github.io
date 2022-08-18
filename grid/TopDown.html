@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 1.5.0">
+<meta name="crystal_docs.project_version" content="master-dev">
+<meta name="crystal_docs.project_name" content="grid">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="grid">
+  <title>TopDown - grid master-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          grid
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="grid/Grid" data-name="grid">
+      <a href="Grid.html">Grid</a>
+      
+    </li>
+  
+  <li class=" " data-id="grid/LeftRight" data-name="leftright">
+      <a href="LeftRight.html">LeftRight</a>
+      
+    </li>
+  
+  <li class=" current" data-id="grid/TopDown" data-name="topdown">
+      <a href="TopDown.html">TopDown</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> TopDown
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="direct-including-types" class="anchor" href="#direct-including-types">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Direct including types
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="Grid.html">Grid</a></li>
+    
+  </ul>
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      top_down.cr
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#canvas_td-instance-method" class="signature"><strong>#canvas_td</strong></a>
+        
+          <div class="summary"><p>Canvas is a variable that holds the cell of each string in grid format.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#canvas_td%3D%28canvas_td%29-instance-method" class="signature"><strong>#canvas_td=</strong>(canvas_td)</a>
+        
+          <div class="summary"><p>Canvas is a variable that holds the cell of each string in grid format.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#col_width_td-instance-method" class="signature"><strong>#col_width_td</strong></a>
+        
+          <div class="summary"><p>Holds curently max width for every column.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#col_width_td%3D%28col_width_td%29-instance-method" class="signature"><strong>#col_width_td=</strong>(col_width_td)</a>
+        
+          <div class="summary"><p>Holds curently max width for every column.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#virtual_column_width_td%28col_size%3AInt32%29%3AArray%28Int32%29-instance-method" class="signature"><strong>#virtual_column_width_td</strong>(col_size : Int32) : Array(Int32)</a>
+        
+          <div class="summary"><p>Calculate each column width for canvas with virtually col item of <em>col_size</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#virtual_one_column_td%3AArray%28Array%28String%29%29-instance-method" class="signature"><strong>#virtual_one_column_td</strong> : Array(Array(String))</a>
+        
+          <div class="summary"><p>Return canvas with the size of one column.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="canvas_td-instance-method">
+      <div class="signature">
+        
+        def <strong>canvas_td</strong>
+
+        <a class="method-permalink" href="#canvas_td-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Canvas is a variable that holds the cell of each string in grid format.
+In @canvas_td, each element in the array is representing a column.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@canvas_td <span class="o">=</span> [[<span class="s">&quot;Rubys&quot;</span>, <span class="s">&quot;Crystals&quot;</span>, <span class="s">&quot;Emeralds&quot;</span>], [<span class="s">&quot;Sappgires&quot;</span>, <span class="s">&quot;a&quot;</span>, <span class="s">&quot;b&quot;</span>]]
+
+<span class="c"># It is Top-Down</span>
+<span class="c"># Rubys    Sappgires</span>
+<span class="c"># Crystals a        </span>
+<span class="c"># Emeralds b        </span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="canvas_td=(canvas_td)-instance-method">
+      <div class="signature">
+        
+        def <strong>canvas_td=</strong>(canvas_td)
+
+        <a class="method-permalink" href="#canvas_td%3D%28canvas_td%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Canvas is a variable that holds the cell of each string in grid format.
+In @canvas_td, each element in the array is representing a column.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@canvas_td <span class="o">=</span> [[<span class="s">&quot;Rubys&quot;</span>, <span class="s">&quot;Crystals&quot;</span>, <span class="s">&quot;Emeralds&quot;</span>], [<span class="s">&quot;Sappgires&quot;</span>, <span class="s">&quot;a&quot;</span>, <span class="s">&quot;b&quot;</span>]]
+
+<span class="c"># It is Top-Down</span>
+<span class="c"># Rubys    Sappgires</span>
+<span class="c"># Crystals a        </span>
+<span class="c"># Emeralds b        </span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="col_width_td-instance-method">
+      <div class="signature">
+        
+        def <strong>col_width_td</strong>
+
+        <a class="method-permalink" href="#col_width_td-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds curently max width for every column.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@canvas_td <span class="o">=</span> [[<span class="s">&quot;Rubys&quot;</span>, <span class="s">&quot;Crystals&quot;</span>, <span class="s">&quot;Emeralds&quot;</span>], [<span class="s">&quot;Sappgires&quot;</span>, <span class="s">&quot;a&quot;</span>, <span class="s">&quot;b&quot;</span>]]
+@col_width_td <span class="o">=</span> [<span class="n">8</span>, <span class="n">9</span>]
+
+<span class="c"># =&gt; 1st column width is 6 char</span>
+<span class="c"># =&gt; 2nd column width is 7 char</span>
+<span class="c"># =&gt; 3rd column width is 9 char</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="col_width_td=(col_width_td)-instance-method">
+      <div class="signature">
+        
+        def <strong>col_width_td=</strong>(col_width_td)
+
+        <a class="method-permalink" href="#col_width_td%3D%28col_width_td%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds curently max width for every column.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@canvas_td <span class="o">=</span> [[<span class="s">&quot;Rubys&quot;</span>, <span class="s">&quot;Crystals&quot;</span>, <span class="s">&quot;Emeralds&quot;</span>], [<span class="s">&quot;Sappgires&quot;</span>, <span class="s">&quot;a&quot;</span>, <span class="s">&quot;b&quot;</span>]]
+@col_width_td <span class="o">=</span> [<span class="n">8</span>, <span class="n">9</span>]
+
+<span class="c"># =&gt; 1st column width is 6 char</span>
+<span class="c"># =&gt; 2nd column width is 7 char</span>
+<span class="c"># =&gt; 3rd column width is 9 char</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="virtual_column_width_td(col_size:Int32):Array(Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>virtual_column_width_td</strong>(col_size : Int32) : Array(Int32)
+
+        <a class="method-permalink" href="#virtual_column_width_td%28col_size%3AInt32%29%3AArray%28Int32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calculate each column width for canvas with virtually col item of <em>col_size</em>.</p>
+<p>Returning the width of every column in type Array(Int32)</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@list <span class="o">=</span> [
+  <span class="s">&quot;str_1&quot;</span>,
+  <span class="s">&quot;str_30&quot;</span>,
+  <span class="s">&quot;str_200&quot;</span>,
+  <span class="s">&quot;str_4000&quot;</span>,
+  <span class="s">&quot;str_50000&quot;</span>,
+]
+virtual_column_width_td(<span class="n">3</span>) <span class="c"># =&gt; [7, 9]</span>
+
+<span class="c"># Virtual column would be like</span>
+<span class="c"># str_1   str_4000</span>
+<span class="c"># str_30  str_50000</span>
+<span class="c"># str_200</span>
+
+virtual_column_width_td(<span class="n">2</span>) <span class="c"># =&gt; [6, 8, 9]</span>
+
+<span class="c"># Virtual column would be like</span>
+<span class="c"># str_1  str_200  str_50000</span>
+<span class="c"># str_30 str_4000</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="virtual_one_column_td:Array(Array(String))-instance-method">
+      <div class="signature">
+        
+        def <strong>virtual_one_column_td</strong> : Array(Array(String))
+
+        <a class="method-permalink" href="#virtual_one_column_td%3AArray%28Array%28String%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Return canvas with the size of one column.
+Its set @canvas_td and calculate the @col_width_td</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@list <span class="o">=</span> [
+  <span class="s">&quot;str_1&quot;</span>,
+  <span class="s">&quot;str_30&quot;</span>,
+  <span class="s">&quot;str_200&quot;</span>,
+  <span class="s">&quot;str_4000&quot;</span>,
+  <span class="s">&quot;str_50000&quot;</span>,
+]
+virtual_one_column_td <span class="c"># =&gt; [[&quot;str_1&quot;, &quot;str_30&quot;, &quot;str_200&quot;, &quot;str_4000&quot;, &quot;str_50000&quot;]]</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

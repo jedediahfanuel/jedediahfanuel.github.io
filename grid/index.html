@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Crystal Docs 1.5.0">
-<meta name="crystal_docs.project_version" content="master">
+<meta name="crystal_docs.project_version" content="master-dev">
 <meta name="crystal_docs.project_name" content="grid">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="js/doc.js"></script>
 
   <meta name="repository-name" content="grid">
-  <title>grid master</title>
+  <title>grid master-dev</title>
   <script type="text/javascript">
   CrystalDocs.base_path = "";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        master
+        master-dev
       </span>
     </div>
   </div>
@@ -53,6 +53,16 @@
   
   <li class=" " data-id="grid/Grid" data-name="grid">
       <a href="Grid.html">Grid</a>
+      
+    </li>
+  
+  <li class=" " data-id="grid/LeftRight" data-name="leftright">
+      <a href="LeftRight.html">LeftRight</a>
+      
+    </li>
+  
+  <li class=" " data-id="grid/TopDown" data-name="topdown">
+      <a href="TopDown.html">TopDown</a>
       
     </li>
   
@@ -91,14 +101,26 @@
 </a>Usage</h2>
 <pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;grid&quot;</span>
 
-grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires&quot;</span>)
-grid.virtual_generate(<span class="n">18</span>) <span class="c"># 18 char is the max width of the canvas (not the column)  </span>
-grid.virtual_to_canvas
-grid.to_s(<span class="n">true</span>) <span class="c"># true [default | omittable] == top-down direction | false == left-right direction</span>
+grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires a b&quot;</span>) <span class="c"># Create a new Grid instance</span>
 
-<span class="c"># Rubys    Emeralds </span>
-<span class="c"># Crystals Sapphires</span>
+grid.virtual_generate(<span class="n">18</span>, <span class="n">true</span>) <span class="c"># generate top-down grid with 18 char as max canvas width</span>
+grid.to_s(<span class="n">true</span>) <span class="c"># get the string format (true) in top-down direction</span>
+<span class="c"># Rubys    Sapphires</span>
+<span class="c"># Crystals a        </span>
+<span class="c"># Emeralds b        </span>
+
+grid.virtual_generate(<span class="n">18</span>, <span class="n">false</span>) <span class="c"># generate left-right grid with 18 char as max canvas width</span>
+grid.to_s(<span class="n">false</span>) <span class="c"># get the string format (false) in left-right direction</span>
+<span class="c"># Rubys    Crystals </span>
+<span class="c"># Emeralds Sapphires</span>
+<span class="c"># a        b</span>
+
+grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class="s">&#39;|&#39;</span>) <span class="c"># get the string format (true) in top-down direction</span>
+<span class="c">#    Rubys|Sapphires</span>
+<span class="c"># Crystals|        a</span>
+<span class="c"># Emeralds|        b</span>
 </code></pre>
+<p>For detailed api, check <a href="https://jeddi212.github.io/grid/">grid docs</a>.</p>
 <h2><a id="development" class="anchor" href="#development">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
@@ -110,10 +132,10 @@ grid.to_s(<span class="n">true</span>) <span class="c"># true [default | omittab
 <p>[x] Auto grid</p>
 </li>
 <li>
-<p>[ ] Direction</p>
+<p>[x] Direction</p>
 <ul>
 <li>[x] top-down</li>
-<li>[ ] left-right</li>
+<li>[x] left-right</li>
 </ul>
 </li>
 <li>
