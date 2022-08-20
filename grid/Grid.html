@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Crystal Docs 1.5.0">
-<meta name="crystal_docs.project_version" content="0.1.1">
+<meta name="crystal_docs.project_version" content="0.1.1-dev">
 <meta name="crystal_docs.project_name" content="grid">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="js/doc.js"></script>
 
   <meta name="repository-name" content="grid">
-  <title>Grid - grid 0.1.1</title>
+  <title>Grid - grid 0.1.1-dev</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.1.1
+        0.1.1-dev
       </span>
     </div>
   </div>
@@ -156,9 +156,7 @@ grid.to_s(<span class="n">true</span>, <span class="n">false</span>) <span class
   </h2>
   
     
-      <a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L30" target="_blank">
-        grid.cr
-      </a>
+      grid.cr
     
     <br/>
   
@@ -447,8 +445,6 @@ grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</s
       <br/>
       <div>
         
-          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L82" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -471,8 +467,6 @@ grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</s
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L93" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -517,8 +511,6 @@ grid.auto(<span class="n">18</span>, <span class="n">false</span>) <span class="
       <br/>
       <div>
         
-          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L125" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -541,8 +533,6 @@ delimiter_count_of(<span class="n">7</span>) <span class="c"># =&gt; 6</span></c
       <br/>
       <div>
         
-          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L107" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -564,8 +554,6 @@ grid.list <span class="c"># =&gt; [&quot;str_1&quot;, &quot;str_2&quot;, &quot;s
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L45" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -590,8 +578,6 @@ grid.list <span class="c"># =&gt; [&quot;str_1&quot;, &quot;str_2&quot;, &quot;s
       <br/>
       <div>
         
-          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L59" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -615,8 +601,6 @@ grid.list <span class="c"># =&gt; [&quot;str_1&quot;, &quot;str_2&quot;, &quot;s
       <br/>
       <div>
         
-          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L71" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -637,8 +621,6 @@ Default value is <code>24</code>.</p>
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -661,8 +643,6 @@ Default value is <code>24</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L36" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -683,8 +663,6 @@ Default &quot; &quot; (a single space)</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L49" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -703,92 +681,54 @@ The first parameter <em>top_down</em> default is true.
 The second parameter <em>align_left</em> default is true.
 The third parameter <em>separator</em> default is ' ' (single space) || it follows the separator specified from <code><a href="Grid.html#auto%28max_w%3AInt32%3D24%2Ctop_down%3ABool%3Dtrue%29-instance-method">#auto</a></code>.</p>
 <p>Example:</p>
-<pre><code class="language-crystal">grid = Grid.new(&quot;Rubys Crystals Emeralds Sapphires a b&quot;) # Create a new Grid instance
+<pre><code class="language-crystal">grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires a b&quot;</span>) <span class="c"># Create a new Grid instance</span>
 
-grid.auto(18, true) # generate top-down grid with 18 char as max canvas width
-# =&gt; [[&quot;Rubys&quot;, &quot;Crystals&quot;, &quot;Emeralds&quot;], [&quot;Sapphires&quot;, &quot;a&quot;, &quot;b&quot;]]
+grid.auto(<span class="n">18</span>, <span class="n">true</span>) <span class="c"># generate top-down grid with 18 char as max canvas width</span>
+<span class="c"># =&gt; [[&quot;Rubys&quot;, &quot;Crystals&quot;, &quot;Emeralds&quot;], [&quot;Sapphires&quot;, &quot;a&quot;, &quot;b&quot;]]</span>
 
-grid.to_s(true) # get the string format (true) in top-down direction
-# Rubys    Sapphires
-# Crystals a        
-# Emeralds b        
+grid.to_s(<span class="n">true</span>) <span class="c"># get the string format (true) in top-down direction</span>
+<span class="c"># Rubys    Sapphires</span>
+<span class="c"># Crystals a        </span>
+<span class="c"># Emeralds b        </span>
 
-grid.to_s(true, false)
-#    Rubys Sapphires
-# Crystals         a
-# Emeralds         b
+grid.to_s(<span class="n">true</span>, <span class="n">false</span>)
+<span class="c">#    Rubys Sapphires</span>
+<span class="c"># Crystals         a</span>
+<span class="c"># Emeralds         b</span>
 
-grid.auto(18, false) # generate left-right grid with 18 char as max canvas width
-# =&gt; [[&quot;Rubys&quot;, &quot;Crystals&quot;], [&quot;Emeralds&quot;, &quot;Sapphires&quot;], [&quot;a&quot;, &quot;b&quot;]]
+grid.auto(<span class="n">18</span>, <span class="n">false</span>) <span class="c"># generate left-right grid with 18 char as max canvas width</span>
+<span class="c"># =&gt; [[&quot;Rubys&quot;, &quot;Crystals&quot;], [&quot;Emeralds&quot;, &quot;Sapphires&quot;], [&quot;a&quot;, &quot;b&quot;]]</span>
 
-grid.to_s(false) # get the string format (false) in left-right direction
-# Rubys    Crystals 
-# Emeralds Sapphires
-# a        b
+grid.to_s(<span class="n">false</span>) <span class="c"># get the string format (false) in left-right direction</span>
+<span class="c"># Rubys    Crystals </span>
+<span class="c"># Emeralds Sapphires</span>
+<span class="c"># a        b</span>
 
-grid.to_s(false, false)
-#    Rubys  Crystals
-# Emeralds Sapphires
-#        a         b
+grid.to_s(<span class="n">false</span>, <span class="n">false</span>)
+<span class="c">#    Rubys  Crystals</span>
+<span class="c"># Emeralds Sapphires</span>
+<span class="c">#        a         b</span></code></pre>
+<p>Let's see another example for custom separator.</p>
+<pre><code class="language-crystal">grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires a b&quot;</span>, <span class="s">&quot; | &quot;</span>)
+grid.auto(<span class="n">20</span>, <span class="n">true</span>)
+grid.to_s(<span class="n">true</span>, <span class="n">false</span>)
+<span class="c">#    Rubys | Sapphires</span>
+<span class="c"># Crystals |         a</span>
+<span class="c"># Emeralds |         b</span>
 
-Let&#39;s see another example for custom separator.</code></pre>
-<p>grid = Grid.new(&quot;Rubys Crystals Emeralds Sapphires a b&quot;, &quot; | &quot;)
-grid.auto(20, true)
-grid.to_s(true, false)</p>
-<h1><a id="rubys-sapphires" class="anchor" href="#rubys-sapphires">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Rubys | Sapphires</h1>
-<h1><a id="crystals-a" class="anchor" href="#crystals-a">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Crystals |         a</h1>
-<h1><a id="emeralds-b" class="anchor" href="#emeralds-b">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Emeralds |         b</h1>
-<p>grid.to_s(true, false, &quot;---&quot;)</p>
-<h1><a id="rubys-sapphires-1" class="anchor" href="#rubys-sapphires-1">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Rubys---Sapphires</h1>
-<h1><a id="crystals-a-1" class="anchor" href="#crystals-a-1">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Crystals---        a</h1>
-<h1><a id="emeralds-b-1" class="anchor" href="#emeralds-b-1">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Emeralds---        b</h1>
-<p>grid.to_s(true, false, &quot;........&quot;) # It works even the separator exceed virtual separator size</p>
-<h1><a id="rubys...sapphires" class="anchor" href="#rubys...sapphires">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Rubys...Sapphires</h1>
-<h1><a id="crystals...-a" class="anchor" href="#crystals...-a">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Crystals...        a</h1>
-<h1><a id="emeralds...-b" class="anchor" href="#emeralds...-b">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Emeralds...        b</h1>
-<pre><code class="language-crystal"></code></pre>
+grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class="s">&quot;---&quot;</span>)
+<span class="c">#    Rubys---Sapphires</span>
+<span class="c"># Crystals---        a</span>
+<span class="c"># Emeralds---        b</span>
+
+grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class="s">&quot;........&quot;</span>) <span class="c"># It works even the separator exceed virtual separator size</span>
+<span class="c">#    Rubys...Sapphires</span>
+<span class="c"># Crystals...        a</span>
+<span class="c"># Emeralds...        b</span></code></pre>
         </div>
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L185" target="_blank">View source</a>]
         
       </div>
     </div>
