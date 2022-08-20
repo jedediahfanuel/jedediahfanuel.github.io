@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Crystal Docs 1.5.0">
-<meta name="crystal_docs.project_version" content="master-dev">
+<meta name="crystal_docs.project_version" content="0.1.1">
 <meta name="crystal_docs.project_name" content="grid">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="js/doc.js"></script>
 
   <meta name="repository-name" content="grid">
-  <title>TopDown - grid master-dev</title>
+  <title>TopDown - grid 0.1.1</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        master-dev
+        0.1.1
       </span>
     </div>
   </div>
@@ -120,7 +120,9 @@
   </h2>
   
     
-      top_down.cr
+      <a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/auto/top_down.cr#L1" target="_blank">
+        auto/top_down.cr
+      </a>
     
     <br/>
   
@@ -144,30 +146,37 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#canvas_td-instance-method" class="signature"><strong>#canvas_td</strong></a>
+        <a href="#canvas_td%3AArray%28Array%28String%29%29-instance-method" class="signature"><strong>#canvas_td</strong> : Array(Array(String))</a>
         
           <div class="summary"><p>Canvas is a variable that holds the cell of each string in grid format.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#canvas_td%3D%28canvas_td%29-instance-method" class="signature"><strong>#canvas_td=</strong>(canvas_td)</a>
+        <a href="#canvas_td%3D%28canvas_td%3AArray%28Array%28String%29%29%29-instance-method" class="signature"><strong>#canvas_td=</strong>(canvas_td : Array(Array(String)))</a>
         
           <div class="summary"><p>Canvas is a variable that holds the cell of each string in grid format.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#col_width_td-instance-method" class="signature"><strong>#col_width_td</strong></a>
+        <a href="#col_width_td%3AArray%28Int32%29-instance-method" class="signature"><strong>#col_width_td</strong> : Array(Int32)</a>
         
           <div class="summary"><p>Holds curently max width for every column.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#col_width_td%3D%28col_width_td%29-instance-method" class="signature"><strong>#col_width_td=</strong>(col_width_td)</a>
+        <a href="#col_width_td%3D%28col_width_td%3AArray%28Int32%29%29-instance-method" class="signature"><strong>#col_width_td=</strong>(col_width_td : Array(Int32))</a>
         
           <div class="summary"><p>Holds curently max width for every column.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#one_column_td%3AArray%28Array%28String%29%29-instance-method" class="signature"><strong>#one_column_td</strong> : Array(Array(String))</a>
+        
+          <div class="summary"><p>Return canvas with the size of one column.</p></div>
         
       </li>
     
@@ -175,13 +184,6 @@
         <a href="#virtual_column_width_td%28col_size%3AInt32%29%3AArray%28Int32%29-instance-method" class="signature"><strong>#virtual_column_width_td</strong>(col_size : Int32) : Array(Int32)</a>
         
           <div class="summary"><p>Calculate each column width for canvas with virtually col item of <em>col_size</em>.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#virtual_one_column_td%3AArray%28Array%28String%29%29-instance-method" class="signature"><strong>#virtual_one_column_td</strong> : Array(Array(String))</a>
-        
-          <div class="summary"><p>Return canvas with the size of one column.</p></div>
         
       </li>
     
@@ -209,12 +211,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="canvas_td-instance-method">
+    <div class="entry-detail" id="canvas_td:Array(Array(String))-instance-method">
       <div class="signature">
         
-        def <strong>canvas_td</strong>
+        def <strong>canvas_td</strong> : Array(Array(String))
 
-        <a class="method-permalink" href="#canvas_td-instance-method">#</a>
+        <a class="method-permalink" href="#canvas_td%3AArray%28Array%28String%29%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -233,15 +235,17 @@ In @canvas_td, each element in the array is representing a column.</p>
       <br/>
       <div>
         
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/auto/top_down.cr#L14" target="_blank">View source</a>]
+        
       </div>
     </div>
   
-    <div class="entry-detail" id="canvas_td=(canvas_td)-instance-method">
+    <div class="entry-detail" id="canvas_td=(canvas_td:Array(Array(String)))-instance-method">
       <div class="signature">
         
-        def <strong>canvas_td=</strong>(canvas_td)
+        def <strong>canvas_td=</strong>(canvas_td : Array(Array(String)))
 
-        <a class="method-permalink" href="#canvas_td%3D%28canvas_td%29-instance-method">#</a>
+        <a class="method-permalink" href="#canvas_td%3D%28canvas_td%3AArray%28Array%28String%29%29%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -260,15 +264,17 @@ In @canvas_td, each element in the array is representing a column.</p>
       <br/>
       <div>
         
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/auto/top_down.cr#L14" target="_blank">View source</a>]
+        
       </div>
     </div>
   
-    <div class="entry-detail" id="col_width_td-instance-method">
+    <div class="entry-detail" id="col_width_td:Array(Int32)-instance-method">
       <div class="signature">
         
-        def <strong>col_width_td</strong>
+        def <strong>col_width_td</strong> : Array(Int32)
 
-        <a class="method-permalink" href="#col_width_td-instance-method">#</a>
+        <a class="method-permalink" href="#col_width_td%3AArray%28Int32%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -286,15 +292,17 @@ In @canvas_td, each element in the array is representing a column.</p>
       <br/>
       <div>
         
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/auto/top_down.cr#L27" target="_blank">View source</a>]
+        
       </div>
     </div>
   
-    <div class="entry-detail" id="col_width_td=(col_width_td)-instance-method">
+    <div class="entry-detail" id="col_width_td=(col_width_td:Array(Int32))-instance-method">
       <div class="signature">
         
-        def <strong>col_width_td=</strong>(col_width_td)
+        def <strong>col_width_td=</strong>(col_width_td : Array(Int32))
 
-        <a class="method-permalink" href="#col_width_td%3D%28col_width_td%29-instance-method">#</a>
+        <a class="method-permalink" href="#col_width_td%3D%28col_width_td%3AArray%28Int32%29%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -311,6 +319,39 @@ In @canvas_td, each element in the array is representing a column.</p>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/auto/top_down.cr#L27" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="one_column_td:Array(Array(String))-instance-method">
+      <div class="signature">
+        
+        def <strong>one_column_td</strong> : Array(Array(String))
+
+        <a class="method-permalink" href="#one_column_td%3AArray%28Array%28String%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Return canvas with the size of one column.
+Its set @canvas_td and calculate the @col_width_td</p>
+<p>Example:</p>
+<pre><code class="language-crystal">@list <span class="o">=</span> [
+  <span class="s">&quot;str_1&quot;</span>,
+  <span class="s">&quot;str_30&quot;</span>,
+  <span class="s">&quot;str_200&quot;</span>,
+  <span class="s">&quot;str_4000&quot;</span>,
+  <span class="s">&quot;str_50000&quot;</span>,
+]
+one_column_td <span class="c"># =&gt; [[&quot;str_1&quot;, &quot;str_30&quot;, &quot;str_200&quot;, &quot;str_4000&quot;, &quot;str_50000&quot;]]</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/auto/top_down.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -352,34 +393,7 @@ virtual_column_width_td(<span class="n">2</span>) <span class="c"># =&gt; [6, 8,
       <br/>
       <div>
         
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="virtual_one_column_td:Array(Array(String))-instance-method">
-      <div class="signature">
-        
-        def <strong>virtual_one_column_td</strong> : Array(Array(String))
-
-        <a class="method-permalink" href="#virtual_one_column_td%3AArray%28Array%28String%29%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Return canvas with the size of one column.
-Its set @canvas_td and calculate the @col_width_td</p>
-<p>Example:</p>
-<pre><code class="language-crystal">@list <span class="o">=</span> [
-  <span class="s">&quot;str_1&quot;</span>,
-  <span class="s">&quot;str_30&quot;</span>,
-  <span class="s">&quot;str_200&quot;</span>,
-  <span class="s">&quot;str_4000&quot;</span>,
-  <span class="s">&quot;str_50000&quot;</span>,
-]
-virtual_one_column_td <span class="c"># =&gt; [[&quot;str_1&quot;, &quot;str_30&quot;, &quot;str_200&quot;, &quot;str_4000&quot;, &quot;str_50000&quot;]]</span></code></pre>
-        </div>
-      
-      <br/>
-      <div>
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/auto/top_down.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>

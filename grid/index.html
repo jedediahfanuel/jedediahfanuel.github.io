@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Crystal Docs 1.5.0">
-<meta name="crystal_docs.project_version" content="master-dev">
+<meta name="crystal_docs.project_version" content="0.1.1">
 <meta name="crystal_docs.project_name" content="grid">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="js/doc.js"></script>
 
   <meta name="repository-name" content="grid">
-  <title>grid master-dev</title>
+  <title>grid 0.1.1</title>
   <script type="text/javascript">
   CrystalDocs.base_path = "";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        master-dev
+        0.1.1
       </span>
     </div>
   </div>
@@ -103,19 +103,21 @@
 
 grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires a b&quot;</span>) <span class="c"># Create a new Grid instance</span>
 
-grid.virtual_generate(<span class="n">18</span>, <span class="n">true</span>) <span class="c"># generate top-down grid with 18 char as max canvas width</span>
+grid.auto(<span class="n">18</span>, <span class="n">true</span>) <span class="c"># generate top-down grid with 18 char as max canvas width</span>
 grid.to_s(<span class="n">true</span>) <span class="c"># get the string format (true) in top-down direction</span>
 <span class="c"># Rubys    Sapphires</span>
 <span class="c"># Crystals a        </span>
 <span class="c"># Emeralds b        </span>
 
-grid.virtual_generate(<span class="n">18</span>, <span class="n">false</span>) <span class="c"># generate left-right grid with 18 char as max canvas width</span>
+grid.auto(<span class="n">18</span>, <span class="n">false</span>) <span class="c"># generate left-right grid with 18 char as max canvas width</span>
 grid.to_s(<span class="n">false</span>) <span class="c"># get the string format (false) in left-right direction</span>
 <span class="c"># Rubys    Crystals </span>
 <span class="c"># Emeralds Sapphires</span>
 <span class="c"># a        b</span>
 
-grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class="s">&#39;|&#39;</span>) <span class="c"># get the string format (true) in top-down direction</span>
+grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires a b&quot;</span>, <span class="s">&quot;|&quot;</span>) <span class="c"># Create a new Grid instance with custom separator</span>
+grid.auto(<span class="n">18</span>, <span class="n">true</span>) <span class="c"># generate top-down grid with 18 char as max canvas width</span>
+grid.to_s(<span class="n">true</span>, <span class="n">false</span>) <span class="c"># get the string format (true) in top-down direction</span>
 <span class="c">#    Rubys|Sapphires</span>
 <span class="c"># Crystals|        a</span>
 <span class="c"># Emeralds|        b</span>

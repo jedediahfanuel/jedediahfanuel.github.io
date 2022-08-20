@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Crystal Docs 1.5.0">
-<meta name="crystal_docs.project_version" content="master-dev">
+<meta name="crystal_docs.project_version" content="0.1.1">
 <meta name="crystal_docs.project_name" content="grid">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="js/doc.js"></script>
 
   <meta name="repository-name" content="grid">
-  <title>Grid - grid master-dev</title>
+  <title>Grid - grid 0.1.1</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        master-dev
+        0.1.1
       </span>
     </div>
   </div>
@@ -98,19 +98,21 @@
 <p>Example:</p>
 <pre><code class="language-crystal">grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires a b&quot;</span>) <span class="c"># Create a new Grid instance</span>
 
-grid.virtual_generate(<span class="n">18</span>, <span class="n">true</span>) <span class="c"># generate top-down grid with 18 char as max canvas width</span>
+grid.auto(<span class="n">18</span>, <span class="n">true</span>) <span class="c"># generate top-down grid with 18 char as max canvas width</span>
 grid.to_s(<span class="n">true</span>) <span class="c"># get the string format (true) in top-down direction</span>
 <span class="c"># Rubys    Sapphires</span>
 <span class="c"># Crystals a        </span>
 <span class="c"># Emeralds b        </span>
 
-grid.virtual_generate(<span class="n">18</span>, <span class="n">false</span>) <span class="c"># generate left-right grid with 18 char as max canvas width</span>
+grid.auto(<span class="n">18</span>, <span class="n">false</span>) <span class="c"># generate left-right grid with 18 char as max canvas width</span>
 grid.to_s(<span class="n">false</span>) <span class="c"># get the string format (false) in left-right direction</span>
 <span class="c"># Rubys    Crystals </span>
 <span class="c"># Emeralds Sapphires</span>
 <span class="c"># a        b</span>
 
-grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class="s">&#39;|&#39;</span>) <span class="c"># get the string format (true) in top-down direction</span>
+grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires a b&quot;</span>, <span class="s">&quot;|&quot;</span>) <span class="c"># Create a new Grid instance with custom separator</span>
+grid.auto(<span class="n">18</span>, <span class="n">true</span>) <span class="c"># generate left-right grid with 18 char as max canvas width</span>
+grid.to_s(<span class="n">true</span>, <span class="n">false</span>) <span class="c"># get the string format (true) in top-down direction (false) align-right</span>
 <span class="c">#    Rubys|Sapphires</span>
 <span class="c"># Crystals|        a</span>
 <span class="c"># Emeralds|        b</span></code></pre>
@@ -154,7 +156,9 @@ grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class
   </h2>
   
     
-      grid.cr
+      <a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L30" target="_blank">
+        grid.cr
+      </a>
     
     <br/>
   
@@ -193,14 +197,14 @@ grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28list%3AArray%28String%29%29-class-method" class="signature"><strong>.new</strong>(list : Array(String))</a>
+        <a href="#new%28list%3AArray%28String%29%2Cseparator%3AString%3D%22%22%29-class-method" class="signature"><strong>.new</strong>(list : Array(String), separator : String = <span class="s">&quot; &quot;</span>)</a>
         
           <div class="summary"><p>Initialize grid <em>list</em> with type of <code>Array(String)</code> as a input parameter.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28str%3D%22%22%29-class-method" class="signature"><strong>.new</strong>(str = <span class="s">&quot;&quot;</span>)</a>
+        <a href="#new%28str%3AString%3D%22%22%2Cseparator%3AString%3D%22%22%29-class-method" class="signature"><strong>.new</strong>(str : String = <span class="s">&quot;&quot;</span>, separator : String = <span class="s">&quot; &quot;</span>)</a>
         
           <div class="summary"><p>Initialize grid <em>list</em> with type of <code>String</code> as a input parameter.</p></div>
         
@@ -221,6 +225,13 @@ grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class
     Instance Method Summary
   </h2>
   <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#auto%28max_w%3AInt32%3D24%2Ctop_down%3ABool%3Dtrue%29-instance-method" class="signature"><strong>#auto</strong>(max_w : Int32 = <span class="n">24</span>, top_down : Bool = <span class="n">true</span>)</a>
+        
+          <div class="summary"><p>Generate the virtual canvas based on the current @list and specified <em>max width</em>.</p></div>
+        
+      </li>
     
       <li class="entry-summary">
         <a href="#delimiter_count_of%28col_count%3AInt32%29%3AInt32-instance-method" class="signature"><strong>#delimiter_count_of</strong>(col_count : Int32) : Int32</a>
@@ -265,16 +276,16 @@ grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class
       </li>
     
       <li class="entry-summary">
-        <a href="#to_s%28top_down%3Dtrue%2Calign_left%3Dtrue%2Cseparator%3AChar%3D%27%27%29%3AString-instance-method" class="signature"><strong>#to_s</strong>(top_down = <span class="n">true</span>, align_left = <span class="n">true</span>, separator : Char = <span class="s">&#39; &#39;</span>) : String</a>
+        <a href="#separator%3AString-instance-method" class="signature"><strong>#separator</strong> : String</a>
         
-          <div class="summary"><p>Convert all elements in <em>canvas</em> to a single string using <code>String#build</code>.</p></div>
+          <div class="summary"><p>Holds the separator specified by the user.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#virtual_generate%28max_w%3AInt32%3D24%2Ctop_down%3Dtrue%29-instance-method" class="signature"><strong>#virtual_generate</strong>(max_w : Int32 = <span class="n">24</span>, top_down = <span class="n">true</span>)</a>
+        <a href="#to_s%28top_down%3ABool%3Dtrue%2Calign_left%3ABool%3Dtrue%2Csep%3AString%3D%40separator%29%3AString-instance-method" class="signature"><strong>#to_s</strong>(top_down : Bool = <span class="n">true</span>, align_left : Bool = <span class="n">true</span>, sep : String = @separator) : String</a>
         
-          <div class="summary"><p>Generate the virtual canvas based on the current @list and specified <em>max width</em>.</p></div>
+          <div class="summary"><p>Convert all elements in <em>canvas</em> to a single string using <code>String#build</code>.</p></div>
         
       </li>
     
@@ -291,34 +302,34 @@ grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class
   <h3>Instance methods inherited from module <code><a href="TopDown.html">TopDown</a></code></h3>
   
   
-    <a href="TopDown.html#canvas_td-instance-method" class="tooltip">
-      <span>canvas_td</span>
+    <a href="TopDown.html#canvas_td%3AArray%28Array%28String%29%29-instance-method" class="tooltip">
+      <span>canvas_td : Array(Array(String))</span>
     canvas_td</a>, 
     
   
-    <a href="TopDown.html#canvas_td%3D%28canvas_td%29-instance-method" class="tooltip">
-      <span>canvas_td=(canvas_td)</span>
+    <a href="TopDown.html#canvas_td%3D%28canvas_td%3AArray%28Array%28String%29%29%29-instance-method" class="tooltip">
+      <span>canvas_td=(canvas_td : Array(Array(String)))</span>
     canvas_td=</a>, 
     
   
-    <a href="TopDown.html#col_width_td-instance-method" class="tooltip">
-      <span>col_width_td</span>
+    <a href="TopDown.html#col_width_td%3AArray%28Int32%29-instance-method" class="tooltip">
+      <span>col_width_td : Array(Int32)</span>
     col_width_td</a>, 
     
   
-    <a href="TopDown.html#col_width_td%3D%28col_width_td%29-instance-method" class="tooltip">
-      <span>col_width_td=(col_width_td)</span>
+    <a href="TopDown.html#col_width_td%3D%28col_width_td%3AArray%28Int32%29%29-instance-method" class="tooltip">
+      <span>col_width_td=(col_width_td : Array(Int32))</span>
     col_width_td=</a>, 
+    
+  
+    <a href="TopDown.html#one_column_td%3AArray%28Array%28String%29%29-instance-method" class="tooltip">
+      <span>one_column_td : Array(Array(String))</span>
+    one_column_td</a>, 
     
   
     <a href="TopDown.html#virtual_column_width_td%28col_size%3AInt32%29%3AArray%28Int32%29-instance-method" class="tooltip">
       <span>virtual_column_width_td(col_size : Int32) : Array(Int32)</span>
-    virtual_column_width_td</a>, 
-    
-  
-    <a href="TopDown.html#virtual_one_column_td%3AArray%28Array%28String%29%29-instance-method" class="tooltip">
-      <span>virtual_one_column_td : Array(Array(String))</span>
-    virtual_one_column_td</a>
+    virtual_column_width_td</a>
     
   
 
@@ -335,34 +346,34 @@ grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class
   <h3>Instance methods inherited from module <code><a href="LeftRight.html">LeftRight</a></code></h3>
   
   
-    <a href="LeftRight.html#canvas_lr-instance-method" class="tooltip">
-      <span>canvas_lr</span>
+    <a href="LeftRight.html#canvas_lr%3AArray%28Array%28String%29%29-instance-method" class="tooltip">
+      <span>canvas_lr : Array(Array(String))</span>
     canvas_lr</a>, 
     
   
-    <a href="LeftRight.html#canvas_lr%3D%28canvas_lr%29-instance-method" class="tooltip">
-      <span>canvas_lr=(canvas_lr)</span>
+    <a href="LeftRight.html#canvas_lr%3D%28canvas_lr%3AArray%28Array%28String%29%29%29-instance-method" class="tooltip">
+      <span>canvas_lr=(canvas_lr : Array(Array(String)))</span>
     canvas_lr=</a>, 
     
   
-    <a href="LeftRight.html#col_width_lr-instance-method" class="tooltip">
-      <span>col_width_lr</span>
+    <a href="LeftRight.html#col_width_lr%3AArray%28Int32%29-instance-method" class="tooltip">
+      <span>col_width_lr : Array(Int32)</span>
     col_width_lr</a>, 
     
   
-    <a href="LeftRight.html#col_width_lr%3D%28col_width_lr%29-instance-method" class="tooltip">
-      <span>col_width_lr=(col_width_lr)</span>
+    <a href="LeftRight.html#col_width_lr%3D%28col_width_lr%3AArray%28Int32%29%29-instance-method" class="tooltip">
+      <span>col_width_lr=(col_width_lr : Array(Int32))</span>
     col_width_lr=</a>, 
+    
+  
+    <a href="LeftRight.html#one_column_lr%3AArray%28Array%28String%29%29-instance-method" class="tooltip">
+      <span>one_column_lr : Array(Array(String))</span>
+    one_column_lr</a>, 
     
   
     <a href="LeftRight.html#virtual_column_width_lr%28row_size%3AInt32%29%3AArray%28Int32%29-instance-method" class="tooltip">
       <span>virtual_column_width_lr(row_size : Int32) : Array(Int32)</span>
-    virtual_column_width_lr</a>, 
-    
-  
-    <a href="LeftRight.html#virtual_one_column_lr%3AArray%28Array%28String%29%29-instance-method" class="tooltip">
-      <span>virtual_one_column_lr : Array(Array(String))</span>
-    virtual_one_column_lr</a>
+    virtual_column_width_lr</a>
     
   
 
@@ -416,12 +427,12 @@ grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(list:Array(String))-class-method">
+    <div class="entry-detail" id="new(list:Array(String),separator:String=&quot;&quot;)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(list : Array(String))
+        def self.<strong>new</strong>(list : Array(String), separator : String = <span class="s">&quot; &quot;</span>)
 
-        <a class="method-permalink" href="#new%28list%3AArray%28String%29%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28list%3AArray%28String%29%2Cseparator%3AString%3D%22%22%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -430,21 +441,23 @@ grid.to_s(<span class="n">true</span>, <span class="n">false</span>, <span class
 Example:</p>
 <pre><code class="language-crystal">grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>([<span class="s">&quot;Ruby&quot;</span>, <span class="s">&quot;Crystal&quot;</span>, <span class="s">&quot;Emerald&quot;</span>, <span class="s">&quot;Sapphire&quot;</span>])
 grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>() <span class="c"># produce empty string</span>
-grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>() <span class="c"># produce empty list</span></code></pre>
+grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>([<span class="s">&quot;Ruby&quot;</span>, <span class="s">&quot;Crystal&quot;</span>, <span class="s">&quot;Emerald&quot;</span>, <span class="s">&quot;Sapphire&quot;</span>], <span class="s">&quot; | &quot;</span>) <span class="c"># with custom separator</span></code></pre>
         </div>
       
       <br/>
       <div>
         
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L82" target="_blank">View source</a>]
+        
       </div>
     </div>
   
-    <div class="entry-detail" id="new(str=&quot;&quot;)-class-method">
+    <div class="entry-detail" id="new(str:String=&quot;&quot;,separator:String=&quot;&quot;)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(str = <span class="s">&quot;&quot;</span>)
+        def self.<strong>new</strong>(str : String = <span class="s">&quot;&quot;</span>, separator : String = <span class="s">&quot; &quot;</span>)
 
-        <a class="method-permalink" href="#new%28str%3D%22%22%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28str%3AString%3D%22%22%2Cseparator%3AString%3D%22%22%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -452,11 +465,14 @@ grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</s
           <p>Initialize grid <em>list</em> with type of <code>String</code> as a input parameter.</p>
 <p>Example:</p>
 <pre><code class="language-crystal">grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Ruby Crystal Emerald Sapphire&quot;</span>)
-grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>() <span class="c"># produce empty list</span></code></pre>
+grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>() <span class="c"># produce empty list</span>
+grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Ruby Crystal Emerald Sapphire&quot;</span>, <span class="s">&quot; | &quot;</span>) <span class="c"># with custom separator</span></code></pre>
         </div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L93" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -474,6 +490,37 @@ grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</s
 </a>
     Instance Method Detail
   </h2>
+  
+    <div class="entry-detail" id="auto(max_w:Int32=24,top_down:Bool=true)-instance-method">
+      <div class="signature">
+        
+        def <strong>auto</strong>(max_w : Int32 = <span class="n">24</span>, top_down : Bool = <span class="n">true</span>)
+
+        <a class="method-permalink" href="#auto%28max_w%3AInt32%3D24%2Ctop_down%3ABool%3Dtrue%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Generate the virtual canvas based on the current @list and specified <em>max width</em>.
+The max width default value is 24.
+The second parameter <em>top_down</em> specified the direction of item. True if top-down and false if left-right.</p>
+<p>Example:</p>
+<pre><code class="language-crystal">grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires a b&quot;</span>) <span class="c"># Create a new Grid instance</span>
+
+grid.auto(<span class="n">18</span>, <span class="n">true</span>) <span class="c"># generate top-down grid with 18 char as max canvas width    </span>
+<span class="c"># =&gt; [[&quot;Rubys&quot;, &quot;Crystals&quot;, &quot;Emeralds&quot;], [&quot;Sapphires&quot;, &quot;a&quot;, &quot;b&quot;]]</span>
+
+grid.auto(<span class="n">18</span>, <span class="n">false</span>) <span class="c"># generate left-right grid with 18 char as max canvas width</span>
+<span class="c"># =&gt; [[&quot;Rubys&quot;, &quot;Crystals&quot;], [&quot;Emeralds&quot;, &quot;Sapphires&quot;], [&quot;a&quot;, &quot;b&quot;]]</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L125" target="_blank">View source</a>]
+        
+      </div>
+    </div>
   
     <div class="entry-detail" id="delimiter_count_of(col_count:Int32):Int32-instance-method">
       <div class="signature">
@@ -493,6 +540,8 @@ delimiter_count_of(<span class="n">7</span>) <span class="c"># =&gt; 6</span></c
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L107" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -515,6 +564,8 @@ grid.list <span class="c"># =&gt; [&quot;str_1&quot;, &quot;str_2&quot;, &quot;s
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L45" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -539,6 +590,8 @@ grid.list <span class="c"># =&gt; [&quot;str_1&quot;, &quot;str_2&quot;, &quot;s
       <br/>
       <div>
         
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L59" target="_blank">View source</a>]
+        
       </div>
     </div>
   
@@ -562,6 +615,8 @@ grid.list <span class="c"># =&gt; [&quot;str_1&quot;, &quot;str_2&quot;, &quot;s
       <br/>
       <div>
         
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L71" target="_blank">View source</a>]
+        
       </div>
     </div>
   
@@ -582,6 +637,8 @@ Default value is <code>24</code>.</p>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -604,94 +661,134 @@ Default value is <code>24</code>.</p>
       <br/>
       <div>
         
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L36" target="_blank">View source</a>]
+        
       </div>
     </div>
   
-    <div class="entry-detail" id="to_s(top_down=true,align_left=true,separator:Char=&#39;&#39;):String-instance-method">
+    <div class="entry-detail" id="separator:String-instance-method">
       <div class="signature">
         
-        def <strong>to_s</strong>(top_down = <span class="n">true</span>, align_left = <span class="n">true</span>, separator : Char = <span class="s">&#39; &#39;</span>) : String
+        def <strong>separator</strong> : String
 
-        <a class="method-permalink" href="#to_s%28top_down%3Dtrue%2Calign_left%3Dtrue%2Cseparator%3AChar%3D%27%27%29%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#separator%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Holds the separator specified by the user.
+Default &quot; &quot; (a single space)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L49" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s(top_down:Bool=true,align_left:Bool=true,sep:String=@separator):String-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>(top_down : Bool = <span class="n">true</span>, align_left : Bool = <span class="n">true</span>, sep : String = @separator) : String
+
+        <a class="method-permalink" href="#to_s%28top_down%3ABool%3Dtrue%2Calign_left%3ABool%3Dtrue%2Csep%3AString%3D%40separator%29%3AString-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Convert all elements in <em>canvas</em> to a single string using <code>String#build</code>.
 The first parameter <em>top_down</em> default is true.
-The second parameter <em>align_left</em> default is true
-The third parameter <em>separator</em> default is ' ' (single space)</p>
+The second parameter <em>align_left</em> default is true.
+The third parameter <em>separator</em> default is ' ' (single space) || it follows the separator specified from <code><a href="Grid.html#auto%28max_w%3AInt32%3D24%2Ctop_down%3ABool%3Dtrue%29-instance-method">#auto</a></code>.</p>
 <p>Example:</p>
-<pre><code class="language-crystal">grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires a b&quot;</span>) <span class="c"># Create a new Grid instance</span>
+<pre><code class="language-crystal">grid = Grid.new(&quot;Rubys Crystals Emeralds Sapphires a b&quot;) # Create a new Grid instance
 
-grid.virtual_generate(<span class="n">18</span>, <span class="n">true</span>) <span class="c"># generate top-down grid with 18 char as max canvas width</span>
-<span class="c"># =&gt; [[&quot;Rubys&quot;, &quot;Crystals&quot;, &quot;Emeralds&quot;], [&quot;Sapphires&quot;, &quot;a&quot;, &quot;b&quot;]]</span>
+grid.auto(18, true) # generate top-down grid with 18 char as max canvas width
+# =&gt; [[&quot;Rubys&quot;, &quot;Crystals&quot;, &quot;Emeralds&quot;], [&quot;Sapphires&quot;, &quot;a&quot;, &quot;b&quot;]]
 
-grid.to_s(<span class="n">true</span>) <span class="c"># get the string format (true) in top-down direction</span>
-<span class="c"># Rubys    Sapphires</span>
-<span class="c"># Crystals a        </span>
-<span class="c"># Emeralds b        </span>
+grid.to_s(true) # get the string format (true) in top-down direction
+# Rubys    Sapphires
+# Crystals a        
+# Emeralds b        
 
-grid.to_s(<span class="n">true</span>, <span class="n">false</span>)
-<span class="c">#    Rubys Sapphires</span>
-<span class="c"># Crystals         a</span>
-<span class="c"># Emeralds         b</span>
+grid.to_s(true, false)
+#    Rubys Sapphires
+# Crystals         a
+# Emeralds         b
 
-grid.to_s(<span class="n">true</span>, <span class="n">true</span>, <span class="s">&#39;|&#39;</span>)
-<span class="c"># Rubys   |Sapphires</span>
-<span class="c"># Crystals|a        </span>
-<span class="c"># Emeralds|b        </span>
+grid.auto(18, false) # generate left-right grid with 18 char as max canvas width
+# =&gt; [[&quot;Rubys&quot;, &quot;Crystals&quot;], [&quot;Emeralds&quot;, &quot;Sapphires&quot;], [&quot;a&quot;, &quot;b&quot;]]
 
-grid.virtual_generate(<span class="n">18</span>, <span class="n">false</span>) <span class="c"># generate left-right grid with 18 char as max canvas width</span>
-<span class="c"># =&gt; [[&quot;Rubys&quot;, &quot;Crystals&quot;], [&quot;Emeralds&quot;, &quot;Sapphires&quot;], [&quot;a&quot;, &quot;b&quot;]]</span>
+grid.to_s(false) # get the string format (false) in left-right direction
+# Rubys    Crystals 
+# Emeralds Sapphires
+# a        b
 
-grid.to_s(<span class="n">false</span>) <span class="c"># get the string format (false) in left-right direction</span>
-<span class="c"># Rubys    Crystals </span>
-<span class="c"># Emeralds Sapphires</span>
-<span class="c"># a        b</span>
+grid.to_s(false, false)
+#    Rubys  Crystals
+# Emeralds Sapphires
+#        a         b
 
-grid.to_s(<span class="n">false</span>, <span class="n">false</span>)
-<span class="c">#    Rubys  Crystals</span>
-<span class="c"># Emeralds Sapphires</span>
-<span class="c">#        a         b</span>
-
-grid.to_s(<span class="n">false</span>, <span class="n">false</span>, <span class="s">&#39;|&#39;</span>)
-   <span class="t">Rubys</span><span class="o">|</span> <span class="t">Crystals</span>
-<span class="t">Emeralds</span><span class="o">|</span><span class="t">Sapphires</span>
-       a<span class="o">|</span>        b</code></pre>
+Let&#39;s see another example for custom separator.</code></pre>
+<p>grid = Grid.new(&quot;Rubys Crystals Emeralds Sapphires a b&quot;, &quot; | &quot;)
+grid.auto(20, true)
+grid.to_s(true, false)</p>
+<h1><a id="rubys-sapphires" class="anchor" href="#rubys-sapphires">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Rubys | Sapphires</h1>
+<h1><a id="crystals-a" class="anchor" href="#crystals-a">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Crystals |         a</h1>
+<h1><a id="emeralds-b" class="anchor" href="#emeralds-b">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Emeralds |         b</h1>
+<p>grid.to_s(true, false, &quot;---&quot;)</p>
+<h1><a id="rubys-sapphires-1" class="anchor" href="#rubys-sapphires-1">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Rubys---Sapphires</h1>
+<h1><a id="crystals-a-1" class="anchor" href="#crystals-a-1">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Crystals---        a</h1>
+<h1><a id="emeralds-b-1" class="anchor" href="#emeralds-b-1">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Emeralds---        b</h1>
+<p>grid.to_s(true, false, &quot;........&quot;) # It works even the separator exceed virtual separator size</p>
+<h1><a id="rubys...sapphires" class="anchor" href="#rubys...sapphires">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Rubys...Sapphires</h1>
+<h1><a id="crystals...-a" class="anchor" href="#crystals...-a">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Crystals...        a</h1>
+<h1><a id="emeralds...-b" class="anchor" href="#emeralds...-b">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Emeralds...        b</h1>
+<pre><code class="language-crystal"></code></pre>
         </div>
       
       <br/>
       <div>
         
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="virtual_generate(max_w:Int32=24,top_down=true)-instance-method">
-      <div class="signature">
-        
-        def <strong>virtual_generate</strong>(max_w : Int32 = <span class="n">24</span>, top_down = <span class="n">true</span>)
-
-        <a class="method-permalink" href="#virtual_generate%28max_w%3AInt32%3D24%2Ctop_down%3Dtrue%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Generate the virtual canvas based on the current @list and specified <em>max width</em>.
-The max width default value is 24.
-The second parameter <em>top_down</em> specified the direction of item. True if top-down and false if left-right.</p>
-<p>Example:</p>
-<pre><code class="language-crystal">grid <span class="o">=</span> <span class="t">Grid</span>.<span class="k">new</span>(<span class="s">&quot;Rubys Crystals Emeralds Sapphires a b&quot;</span>) <span class="c"># Create a new Grid instance</span>
-
-grid.virtual_generate(<span class="n">18</span>, <span class="n">true</span>) <span class="c"># generate top-down grid with 18 char as max canvas width    </span>
-<span class="c"># =&gt; [[&quot;Rubys&quot;, &quot;Crystals&quot;, &quot;Emeralds&quot;], [&quot;Sapphires&quot;, &quot;a&quot;, &quot;b&quot;]]</span>
-
-grid.virtual_generate(<span class="n">18</span>, <span class="n">false</span>) <span class="c"># generate left-right grid with 18 char as max canvas width</span>
-<span class="c"># =&gt; [[&quot;Rubys&quot;, &quot;Crystals&quot;], [&quot;Emeralds&quot;, &quot;Sapphires&quot;], [&quot;a&quot;, &quot;b&quot;]]</span></code></pre>
-        </div>
-      
-      <br/>
-      <div>
+          [<a href="https://github.com/Jeddi212/grid/blob/v0.1.1/src/grid.cr#L185" target="_blank">View source</a>]
         
       </div>
     </div>
