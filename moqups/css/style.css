@@ -66,11 +66,10 @@ a {
 /*  */
 
 .top-section {
-    padding: 0% 7% 0% 7%;
+    padding: 3% 7% 7% 7%;
 }
 
 .top-section h1 {
-    padding-top: 1em;
     font-size: 2.5em;
     text-align: center;
     font-weight: bolder;
@@ -85,13 +84,9 @@ h2 {
 }
 
 .top-section .main-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.rating {
-    width: 56.5%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2.7vw;
 }
 
 .fade {
@@ -149,7 +144,7 @@ figcaption {
 }
 
 .user-picture {
-    width: 5vw;
+    width: calc(2em + 4vw);
     padding-right: 2vw;
 }
 
@@ -159,6 +154,7 @@ figcaption {
 
 .user-info {
     padding: 2vh 0 2vh 0;
+    width: 100%
 }
 
 .user-name {
@@ -203,7 +199,7 @@ figcaption {
 }
 
 .ordered {
-    width: 4vw;
+    width: calc(2em + 2vw);
     padding-right: 3vw;
 }
 
@@ -222,7 +218,6 @@ p {
 }
 
 .formulir {
-    width: 30%;
     padding: 3vw 4.5vw 3vw 4.5vw;
     border-radius: 5px;
     background-color: #ECEFF3;
@@ -235,7 +230,7 @@ form {
 label {
     display: block;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: calc(0.5em + 1vw);
 }
 
 .inputan {
@@ -248,12 +243,12 @@ label {
     border: 3px solid #C9D3DD;
     border-radius: 10px;
     background-color: white;
-    font-size: 1.3em;
+    font-size: calc(0.5em + 0.8vw);
 }
 
 .inputan::placeholder {
     color: #C9D3DD;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 select,
@@ -266,7 +261,7 @@ button {
     box-sizing: border-box;
     width: 100%;
     height: 4em;
-    padding: 1em 1em 1em 1em;
+    padding: 1em 0 1em 0;
     margin: 0.5em 0 2em 0;
     border: 3px solid #29323D;
     border-radius: 5px;
@@ -274,6 +269,7 @@ button {
     color: white;
     font-weight: bold;
     font-size: 1.1em;
+    cursor: pointer;
 }
 
 /*  */
@@ -299,37 +295,14 @@ button {
 }
 
 .mid-section .main-content {
-    padding: 1% 7% 0% 7%;
-}
-
-.pros {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    height: 30vh;
-    padding-top: 5vh;
-    padding-bottom: 10vh;
-}
-
-.pros-one {
-    position: relative;
-}
-
-.pros-one::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 11vw;
-    height: 0.8vh;
-    border-radius: 5px;
-    background-color: #ECEFF3;
+    padding: 1% 7% 5vh 7%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .pros-card {
-    padding: 1em;
-    width: 25vw;
+    padding: 3em 1em 5em 1em;
+    width: 90%;
 }
 
 .pros-picture {
@@ -342,7 +315,7 @@ button {
 }
 
 .pros-detail {
-    padding: 0vh 0 0 0;
+    padding: 0 0 0 0;
     width: 100%;
     display: flex;
     justify-content: left;
