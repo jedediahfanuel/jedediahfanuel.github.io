@@ -1,267 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jedediah Fanuel.</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <div id="loading">
-        <div id="spinner"></div>
-    </div>
-    <div id="particles-js"></div>
-    <div id="box">
-        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
-        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
-        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
-        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
-        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
-        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
-    </div>
-    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
-    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
-<!--     <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">contact</a> -->
-    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
-        <h1>Jedediah Fanuel.</h1>
-        <h2>Software Developer / Indonesian / Jedi</h2>
-        <div id="menu">
-            <a onclick="showabout()">about</a>
-            <a onclick="showwork()">work</a>
-<!--             <a onclick="showcontact()">contact</a> -->
-        </div>
-        <table>
-                <tr>
-                    <td class="animated zoomIn" style="animation-delay:2.2s;"><a href="https://github.com/Jeddi212" class="social"><img src="https://img.shields.io/badge/Github-100000?style=for-the-badge&logo=github&logoColor=white"></a></td>
-                    <td class="animated zoomIn" style="animation-delay:2.4s;"><a href="https://gitlab.com/jedediahf51" class="social"><img src="https://img.shields.io/badge/Gitlab-FA7B0E?style=for-the-badge&logo=gitlab&logoColor=white"></a></td>
-                    <td class="animated zoomIn" style="animation-delay:2.6s;"><a href="https://mail.google.com/mail/u/0/?fs=1&to=jedediahf51@gmail.com&tf=cm" class="social"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a></td>
-                    <td class="animated zoomIn" style="animation-delay:2.8s;"><a href="https://www.youtube.com/channel/UCRm8ZV7WY7x3SUrzJdjXkQA" class="social"><img src="https://img.shields.io/badge/Youtube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a></td> 
-                    <td class="animated zoomIn" style="animation-delay:3.0s;"><a href="https://www.instagram.com/jedediah_jeddi" class="social"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a></td>
-                    <td class="animated zoomIn" style="animation-delay:3.2s;"><a href="https://line.me/ti/p/3oTjtUCmCe" class="social"><img src="https://img.shields.io/badge/Line-00C300?style=for-the-badge&logo=line&logoColor=white"></a></td>
-                    <td class="animated zoomIn" style="animation-delay:3.4s;"><a href="https://www.linkedin.com/in/jedediahfanuel/" class="social"><img src="https://img.shields.io/badge/Linkedin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a></td>
-                    <td class="animated zoomIn" style="animation-delay:3.6s;"><a href="https://exercism.org/profiles/Jeddi212" class="social"><img src="https://img.shields.io/badge/Exercism-009CAB?style=for-the-badge&logo=exercism&logoColor=white"></a></td> 
-                </tr>
-        </table>
-    </div>
-    <div id="work_container" class="container">
-        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
-        <h1 class="dracula-red">Works.</h1>
-        <section class="dracula-white">
-            <h2><a href="https://github.com/Jeddi212/FinalStaticFashion" class="gh-link">Final Static Fashion</a></h2>
-            <p>
-                is an application developed using the <b class="dracula-red">Java</b> programming language, and the UI uses the Java default library, namely <b class="dracula-red">Java Swing</b>. This is the initial view when the application is run.
-            </p>
-            <img alt="Final Static Fashion initial window" src="media/Final Static Fashion.png" style="width: 100%;">
-        </section>
-        <section class="dracula-white">
-            <h2><a href="https://github.com/Jeddi212/Grimoire" class="gh-link">Grimoire</a></h2>
-            <div class="slideshow-container">
-                <div class="mySlides1">
-                  <img src="media/Grimoire_1.png" style="width:100%">
-                </div>
-              
-                <div class="mySlides1">
-                  <img src="media/Grimoire_2.png" style="width:100%">
-                </div>
-              
-                <div class="mySlides1">
-                  <img src="media/Grimoire_3.png" style="width:100%">
-                </div>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-                <div class="mySlides1">
-                    <img src="media/Grimoire_4.png" style="width:100%">
-                </div>
+		<title>Jedediah Fanuel.</title>
 
-                <div class="mySlides1">
-                    <img src="media/Grimoire_5.png" style="width:100%">
-                </div>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/beige.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-                <div class="mySlides1">
-                    <img src="media/Grimoire_6.png" style="width:100%">
-                </div>
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-                <div class="mySlides1">
-                    <img src="media/Grimoire_7.png" style="width:100%">
-                </div>
+		<style>
+			.reveal ul {
+				margin: 0;
+				text-align: center;
+			}
 
-                <div class="mySlides1">
-                    <img src="media/Grimoire_8.png" style="width:100%">
-                </div>
+			.reveal li {
+				display: inline-block;
+				list-style-type: none;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<div class="animate__animated animate__fadeInDown">
+							<h1>Jedediah Fanuel.</h1>
+							<h4>Software Developer / Indonesian / Jedi</h4>
+						</div>
+						
+						<span class="animate__animated animate__zoomIn" style="animation-delay:0.2s;"><a href="https://github.com/Jeddi212" class="social"><img src="https://img.shields.io/badge/Github-100000?style=for-the-badge&logo=github&logoColor=white"></a></span>
+						<span class="animate__animated animate__zoomIn" style="animation-delay:0.4s;"><a href="https://gitlab.com/jedediahf51" class="social"><img src="https://img.shields.io/badge/Gitlab-FA7B0E?style=for-the-badge&logo=gitlab&logoColor=white"></a></span>
+						<span class="animate__animated animate__zoomIn" style="animation-delay:0.6s;"><a href="https://mail.google.com/mail/u/0/?fs=1&to=jedediahf51@gmail.com&tf=cm" class="social"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a></span>
+						<span class="animate__animated animate__zoomIn" style="animation-delay:0.8s;"><a href="https://www.youtube.com/channel/UCRm8ZV7WY7x3SUrzJdjXkQA" class="social"><img src="https://img.shields.io/badge/Youtube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a></span> 
+						<span class="animate__animated animate__zoomIn" style="animation-delay:1.0s;"><a href="https://www.instagram.com/jedediah_jeddi" class="social"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a></span>
+						<span class="animate__animated animate__zoomIn" style="animation-delay:1.0s;"><a href="https://sptfy.com/OodY" class="social"><img src="https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white"></a></span>
+						<span class="animate__animated animate__zoomIn" style="animation-delay:1.2s;"><a href="https://line.me/ti/p/3oTjtUCmCe" class="social"><img src="https://img.shields.io/badge/Line-00C300?style=for-the-badge&logo=line&logoColor=white"></a></span>
+						<span class="animate__animated animate__zoomIn" style="animation-delay:1.4s;"><a href="https://www.linkedin.com/in/jedediahfanuel/" class="social"><img src="https://img.shields.io/badge/Linkedin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a></span>
+						<span class="animate__animated animate__zoomIn" style="animation-delay:1.6s;"><a href="https://exercism.org/profiles/Jeddi212" class="social"><img src="https://img.shields.io/badge/Exercism-009CAB?style=for-the-badge&logo=exercism&logoColor=white"></a></span> 
+					</section>
+					<section><img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FJeddi212&countColor=%23fce775&style=flat-square" alt="visitors"></section>
+				</section>
 
-                <div class="mySlides1">
-                    <img src="media/Grimoire_9.png" style="width:100%">
-                </div>
-              
-                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-            </div>
-        </section>
-        <section class="dracula-white">
-            <h2><a href="https://github.com/Jeddi212/Foodut" class="gh-link">Foodut</a></h2>
-            <p>
-                is a marketplace-themed web app. Front-end using <b class="dracula-red">Vue.js</b> by utilizing <b class="dracula-red">Vuexy</b> templates. The backend uses the <b class="dracula-red">Go</b> programming language and for database system, we use <b class="dracula-red">MySQL</b> via XAMPP. Design pattern used is <i><b class="dracula-red">Singleton</b></i> for database connection, and <i><b class="dracula-red">Factory</b></i> alike for JSON response.
-            </p>
-            <div class="slideshow-container">
-                <div class="mySlides2">
-                  <img src="media/Foodut_1.png" style="width:100%">
-                </div>
-              
-                <div class="mySlides2">
-                  <img src="media/Foodut_2.png" style="width:100%">
-                </div>
-              
-                <div class="mySlides2">
-                  <img src="media/Foodut_3.png" style="width:100%">
-                </div>
+				<section>
+					<div>
+						<h2>Backstory</h2>
+					</div>
+					<section data-auto-animate>
+						<p>"Hello there! My name is Jedediah Fanuel,<br>but you can call me Jedi.</p>
+					</section>
+					<section data-auto-animate>
+						<p>"Hello there! My name is Jedediah Fanuel,<br>but you can call me Jedi.</p>
+						<p>Recently, I graduated with a specialization in informatics engineering from Institut Teknologi Harapan Bangsa in Indonesia 🇮🇩.</p>
+						<span></span>
+					</section>
+					<section data-auto-animate>
+						<p>"Hello there! My name is Jedediah Fanuel,<br>but you can call me Jedi.</p>
+						<p>Recently, I graduated with a specialization in informatics engineering from Institut Teknologi Harapan Bangsa in Indonesia 🇮🇩.</p>
+						<p>Throughout my academic journey,<br>I developed a strong passion for web development.</p>
+					</section>
+					<section data-auto-animate data-auto-animate-restart>
+						<p>I have accumulated valuable experience in building websites, with a particular focus on the back-end.</p>
+					</section>
+					<section data-auto-animate>
+						<p>I have accumulated valuable experience in building websites, with a particular focus on the back-end.</p>
+						<p>While I may have limited experience in front-end development, I don't harbor any dislike for it.</p>
+					</section>
+					<section data-auto-animate>
+						<p>I have accumulated valuable experience in building websites, with a particular focus on the back-end.</p>
+						<p>While I may have limited experience in front-end development, I don't harbor any dislike for it.</p>
+						<p>In fact, I recognize its importance and aim to become a full stack developer in the near future.</p>
+					</section>
+					<section data-auto-animate data-auto-animate-restart>
+						<p>In addition to my web development expertise, I have also worked on exciting projects involving data visualization and machine learning.</p>
+					</section>
+					<section data-auto-animate>
+						<p>In addition to my web development expertise, I have also worked on exciting projects involving data visualization and machine learning.</p>
+						<p>However, despite the success I achieved in these areas, I discovered that my true interest lies elsewhere.</p>
+					</section>
+					<section data-auto-animate data-auto-animate-restart>
+						<p>As I embark on this journey, I am eager to explore new possibilities and expand my skill set.</p>
+					</section>
+					<section data-auto-animate>
+						<p>As I embark on this journey, I am eager to explore new possibilities and expand my skill set.</p>
+						<p> I am excited about the challenges that lie ahead and the opportunities to contribute to innovative projects.</p>
+					</section>
+					<section data-auto-animate>
+						<p>As I embark on this journey, I am eager to explore new possibilities and expand my skill set.</p>
+						<p> I am excited about the challenges that lie ahead and the opportunities to contribute to innovative projects.</p>
+						<p>With my determination and enthusiasm, I am confident that I will excel as a full stack developer and make a meaningful impact in the field."</p>
+					</section>
+				</section>
 
-                <div class="mySlides2">
-                    <img src="media/Foodut_4.png" style="width:100%">
-                </div>
+				<section>
+					<h2>Skills & Interests</h2>
+					<section data-auto-animate data-auto-animate-restart>
+						<p>Throughout my journey, I have gained hands-on experience in several programming languages.</p>
+						<ul>
+							<li><img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="php"></li>
+							<li><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3"></li>
+							<li><img src="https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white" alt="kotlin"></li>
+							<li><img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="go"></li>
+							<li><img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="python"></li>
+							<li><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="openJDK"></li>
+							<li><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5"></li>
+							<li><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript"></li>
+							<li><img src="https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=LaTeX&logoColor=white" alt="latex"></li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<p>I enjoy exploring various programming languages for personal toy projects, always eager to embrace new technologies and their exciting possibilities.</p>
+						<ul>
+							<li><img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="lua"></li>
+							<li><img src="https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="bash"></li>
+							<li><img src="https://img.shields.io/badge/Crystal-000000?style=for-the-badge&logo=crystal&logoColor=white" alt="crystal"></li>
+							<li><img src="https://img.shields.io/badge/Rust-black?style=for-the-badge&logo=rust&logoColor=#E57324" alt="rust"></li>
+							<li><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="typeScript"></li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<p>I have also utilized various databases in my projects, expanding my expertise in managing and manipulating data.</p>
+						<ul>
+							<li><img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="mongoDB"></li>
+							<li><img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="postgresql"></li>
+							<li><img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="mySQL"></li>
+							<li><img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="sqlite"></li>
+							<li><img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white" alt="mariaDB"></li>
+							<li><img src="https://img.shields.io/badge/redis-CC0000.svg?&style=for-the-badge&logo=redis&logoColor=white" alt="redis"></li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<p>I have hands-on experience with a diverse range of frameworks, libraries, and tools.</p>
+						<ul>
+							<li><img src="https://img.shields.io/badge/Overleaf-47A141?style=for-the-badge&logo=Overleaf&logoColor=white" alt="Overleaf"></li>
+							<li><img src="https://img.shields.io/badge/conda-342B029.svg?&style=for-the-badge&logo=anaconda&logoColor=white" alt="conda"></li>
+							<li><img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="docker"></li>
+							<li><img src="https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white" alt="fontAwesome"></li>
+							<li><img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="bootstrap"></li>
+							<li><img src="https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white" alt="githubPages"></li>
+							<li><img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" alt="postman"></li>
+							<li><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="nodeJS"></li>
+							<li><img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot" alt="springBoot"></li>
+							<li><img src="https://img.shields.io/badge/Bulma-00D1B2?style=for-the-badge&logo=Bulma&logoColor=white" alt="bulma"></li>
+							<li><img src="https://img.shields.io/badge/vsCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"></li>
+							<li><img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"></li>
+							<li><img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="markdown"></li>
+							<li><img src="https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00" alt="svelte"></li>
+							<li><img src="https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white" alt="jupyter"></li>
+							<li><img src="https://img.shields.io/badge/reveal.js-F2E142?style=for-the-badge&logo=reveal.js&logoColor=000" alt="revealJS"></li>
+							<li><img src="https://img.shields.io/badge/jetbrains-FFD918?style=for-the-badge&logo=jetbrains&logoColor=black"></li>
+							<li><img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"></li>
+							<li><img src="https://img.shields.io/badge/p5%20js-ED225D?style=for-the-badge&logo=p5dotjs&logoColor=white" alt="p5JS"></li>
+							<li><img src="https://img.shields.io/badge/starship-DD0B78?style=for-the-badge&logo=starship&logoColor=white" alt="starship"></li>
+							<li><img src="https://img.shields.io/badge/VMware-231f20?style=for-the-badge&logo=VMware&logoColor=white" alt="vmWare"></li>
+							<li><img src="https://img.shields.io/badge/Xampp-F37623?style=for-the-badge&logo=xampp&logoColor=white" alt="xampp"></li>
+							<li><img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="git"></li>
+							<li><img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="laravel"></li>
+						</ul>
+					</section>
+					<section>
+						<p>Check out my github stats!</p>
+						<span>
+							<img height="137px" src="https://github-readme-stats-jeddi212.vercel.app/api?username=jeddi212&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&theme=radical" /><img height="137px" src="https://github-readme-stats-jeddi212.vercel.app/api/top-langs/?username=jeddi212&hide=jupyter%20notebook,vue,scss,javascript&hide_title=true&hide_border=true&layout=compact&langs_count=10&&theme=radical"/>
+						</span>
+						<!-- <span>
+							<img height="137px" src="https://github-readme-stats-jeddi212.vercel.app/api/top-langs/?username=jeddi212&hide=jupyter%20notebook,html,vue,css,scss&hide_title=true&hide_border=true&layout=compact&langs_count=10&&theme=radical"/>
+						</span> -->
+						<!-- <span>
+							<img src="https://github-profile-trophy.vercel.app/?username=Jeddi212&theme=radical" alt="githubTrophy">
+						</span> -->
+					</section>
+				</section>
+			</div>
+		</div>
 
-                <div class="mySlides2">
-                    <img src="media/Foodut_5.png" style="width:100%">
-                </div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				jumpToSlide: true,
+				mouseWheel: true,
 
-                <div class="mySlides2">
-                    <img src="media/Foodut_6.png" style="width:100%">
-                </div>
-
-                <div class="mySlides2">
-                    <img src="media/Foodut_7.png" style="width:100%">
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-            </div>
-        </section>
-        <section class="dracula-white">
-            <h2><a href="https://github.com/Jeddi212/LIGHT-Forum" class="gh-link">LIGHT</a></h2>
-            <p>
-                is a gaming web forum built using <b class="dracula-red">vanilla PHP</b>, <b class="dracula-red">HTML</b>, <b class="dracula-red">CSS</b>, <b class="dracula-red">JavaScript</b> and <b class="dracula-red">MySQL</b> as a database system via XAMPP.
-            </p>
-            <div class="slideshow-container">
-                <div class="mySlides3">
-                  <img src="media/LIGHT_1.png" style="width:100%">
-                </div>
-              
-                <div class="mySlides3">
-                  <img src="media/LIGHT_2.png" style="width:100%">
-                </div>
-              
-                <div class="mySlides3">
-                  <img src="media/LIGHT_3.png" style="width:100%">
-                </div>
-
-                <div class="mySlides3">
-                    <img src="media/LIGHT_4.png" style="width:100%">
-                </div>
-
-                <div class="mySlides3">
-                    <video width="100%" controls autoplay muted loop>
-                        <source src="media/LIGHT_Video.mp4">
-                    </video>
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
-            </div>
-        </section>
-        <section>
-            <h2><a href="https://github.com/Jeddi212/Tic-Tac-Toe-Fifty-Shades-of-Grey" class="gh-link">Tic Tac Toe</a></h2>
-            <table style="padding-right: 1%;">
-                <tr>
-                    <td style="vertical-align: top;">
-                        <p>
-                            is a tic tac toe game that uses artificial intelligence. We chose three agents, namely <b class="dracula-red">Random Agent</b>, <b class="dracula-red">Minimax Agent</b>, & <b class="dracula-red">Alpha-Beta Pruning Agent</b>. The board sizes that can be selected are 3x3, 5x5, 7x7 sizes. However, large sizes with smart agents is not playable because of long loading.
-                        </p>
-                    </td>
-                    <td>
-                        <video width="100%" controls>
-                            <source src="media/TicTacToe.mp4">
-                        </video>
-                    </td>
-                </tr>
-            </table>
-        </section>
-    </div>
-    <div id="about_container" class="container">
-        <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
-        <h1 class="dracula-red">About.</h1>
-        <section class="dracula-white">
-            <h2>Words</h2>
-            <p>
-                Hello, you can call me Jedi, I'm now a final year student majoring in informatics engineering at ITHB, Indonesia.
-            </p>
-            <p>
-                I have experience in building websites both on the Front-end and Back-end, but I find that my passion 
-                is more towards the <b><u>Back-end</u></b>. Have also tried several other projects such as Data Visualization 
-                & Machine Learning, but I don't think it's interesting for me.
-            </p>
-        </section>
-        <section class="dracula-white">
-            <h2>Skills & Interest</h2>
-            <p>
-                I have an experience in Object Oriented Programming, especialy in Java programming language, but I'm very happy with the Crystal programming language. Check out my github stats.
-            </p>
-        </section>
-        <section class="dracula-white">
-            <table>
-                <tr>
-                    <td style="width: 65%; vertical-align: top;">
-                        <div>
-                            <span class="animated zoomIn" style="animation-delay:1.0s;">
-                                <img height="137px" src="https://github-readme-stats-jeddi212.vercel.app/api?username=jeddi212&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&theme=radical" /><img height="137px" src="https://github-readme-stats-jeddi212.vercel.app/api/top-langs/?username=jeddi212&hide=jupyter%20notebook,vue,scss,javascript&hide_title=true&hide_border=true&layout=compact&langs_count=10&&theme=radical" />
-                            </span>
-                        </div>
-                    </td>
-                    <td style="width: 35%; vertical-align: top;">
-                        <div>
-                            <img class="animated zoomIn" style="animation-delay:1.3s;" src="https://img.shields.io/badge/Java-D41515?style=for-the-badge&logo=java&logoColor=white">
-                            <img class="animated zoomIn" style="animation-delay:1.4s;" src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white">
-                            <img class="animated zoomIn" style="animation-delay:1.5s;" src="https://img.shields.io/badge/Crystal-000000?style=for-the-badge&logo=crystal&logoColor=white">
-                            <img class="animated zoomIn" style="animation-delay:1.6s;" src="https://img.shields.io/badge/Rust-F74C00?style=for-the-badge&logo=rust&logoColor=white">
-                            <img class="animated zoomIn" style="animation-delay:1.7s;" src="https://img.shields.io/badge/starship-DD0B78?style=for-the-badge&logo=starship&logoColor=white">
-                            <img class="animated zoomIn" style="animation-delay:1.8s;" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
-                            <img class="animated zoomIn" style="animation-delay:1.9s;" src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white">
-                            <img class="animated zoomIn" style="animation-delay:2.0s;" src="https://img.shields.io/badge/vsCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white">
-                            <img class="animated zoomIn" style="animation-delay:2.1s;" src="https://img.shields.io/badge/jetbrains-FFD918?style=for-the-badge&logo=jetbrains&logoColor=black">
-                            <img class="animated zoomIn" style="animation-delay:2.2s;" src="https://img.shields.io/badge/filmora-253642?style=for-the-badge&logo=filmora&logoColor=white">
-                            <img class="animated zoomIn" style="animation-delay:2.3s;" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
-                            <img class="animated zoomIn" style="animation-delay:2.4s;" src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white">
-                        </div>
-                        <div>
-                            <img class="animated zoomIn" style="animation-delay:2.5s;" src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FJeddi212&countColor=%23fce775&style=flat-square">
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </section>
-    </div>
-    <!-- <div id="contact_container" class="container">
-        <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
-        <h1 class="dracula-red">Contact.</h1>
-        <section class="dracula-white">
-            <h2>contact me</h2>
-            <p>
-                <form>
-                    <input type="text" placeholder="name" required>
-                    <input type="email" placeholder="email" required><br>
-                    <textarea placeholder="your message" required rows="5"></textarea><br>
-                    <button class="btn_one">send</button>
-                </form> 
-            </p>
-        </section>
-    </div> -->
-    <div id="footer">
-        made on earth by a human <br> <a href="https://imfunniee.github.io">imfunniee</a>
-    </div>
-    <script src="index.js" type="text/javascript"></script>
-    <script src="particles.js"></script>
-    <script src="app.js"></script>
-</body>
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
 </html>
