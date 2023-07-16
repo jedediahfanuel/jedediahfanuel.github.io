@@ -28,3 +28,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, main, menu, nav, section {
   display: block;
 }
+
+/* Span animation */
+span {
+  display: inline-block;
+}
