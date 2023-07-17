@@ -31,9 +31,9 @@
    --r-heading3-size: 1.55em;
    --r-heading4-size: 0.9em;
    --r-code-font: monospace;
-   --r-link-color: #865DFF;
-   --r-link-color-dark: #FFA3FD;
-   --r-link-color-hover: #E384FF;
+   --r-link-color: #FC2947;
+   --r-link-color-dark: #E384FF;
+   --r-link-color-hover: #865DFF;
    --r-selection-background-color: #44475A;
    --r-selection-color: #fff;
  }
